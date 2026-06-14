@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- SEO: títol i descripció ÚNICS d'aquesta pàgina (la web original en tenia un de sol per a tot) -->
+  <title>Finques Cèsar · Administració de finques i immobiliària a Tarragona</title>
+  <meta name="description" content="Administrador de finques, gestió de lloguers, assessoria jurídica i agència immobiliària a Tarragona. 30 anys de confiança, segona generació. Col·legiats API." />
+  <meta name="theme-color" content="#1f4d3a" />
+  <link rel="canonical" href="https://www.finquescesar.cat/" />
+
+  <!-- Open Graph (la demo corregeix la manca de previsualització a WhatsApp/xarxes) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Finques Cèsar · Administració de finques a Tarragona des de 1995" />
+  <meta property="og:description" content="30 anys administrant la confiança de les comunitats de Tarragona." />
+  <meta property="og:locale" content="ca_ES" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:ital,wght@0,400..800;1,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- SEO extra que impressiona: dades estructurades (Schema JSON-LD) que la web original NO té -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Finques Cèsar S.L.",
+    "description": "Administració de finques, gestió de lloguers, assessoria jurídica i agència immobiliària a Tarragona des de 1995.",
+    "foundingDate": "1995",
+    "areaServed": "Tarragona",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Governador Gonzàlez, 35, entl. 1a",
+      "postalCode": "43001",
+      "addressLocality": "Tarragona",
+      "addressCountry": "ES"
+    },
+    "telephone": ["+34977237515", "+34977237466", "+34977220333"],
+    "email": "finquescesar@finquescesar.cat",
+    "openingHours": ["Mo-Fr 09:30-13:30", "Th 16:00-19:00"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== HEADER (component únic, reutilitzat a totes les pàgines) ===== -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Finques Cèsar — inici">
+        <img class="logo" src="assets/img/logo.png" alt="Finques Cèsar — administració de finques a Tarragona" width="300" height="135" />
+      </a>
+      <nav aria-label="Navegació principal">
+        <ul class="nav-links" id="navlinks">
+          <li><a href="index.html" class="active" aria-current="page">Inici</a></li>
+          <li><a href="serveis.html">Serveis</a></li>
+          <li><a href="agencia.html">Agència immobiliària</a></li>
+          <li><a href="qui-som.html">Qui som</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+          <li class="nav-cta"><a href="contacte.html" class="btn btn-primary">Oficina online</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Obrir menú" aria-expanded="false" aria-controls="navlinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Administradors de finques · API col·legiats</span>
+          <h1>30 anys administrant la <span class="display-underline">confiança</span> de Tarragona.</h1>
+          <p class="lead">Som una empresa familiar, ara en segona generació, dedicada a cuidar el teu patrimoni com si fos nostre: comunitats, lloguers, assessoria jurídica i compravenda. Propera, transparent i amb l'ofici de tres dècades.</p>
+          <div class="hero-actions">
+            <a href="contacte.html" class="btn btn-primary">Demana una visita sense compromís <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="serveis.html" class="btn btn-ghost">Veure els serveis</a>
+          </div>
+          <div class="hero-proof">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="pt"><b>4,9 / 5</b> en valoracions de clients · <b>+250</b> comunitats hi confien <em style="opacity:.6;font-style:normal">(exemple)</em></span>
+          </div>
+        </div>
+        <div class="hero-media reveal">
+          <div class="seal" aria-hidden="true">
+            <span class="in"><span class="est">Des de</span><span class="yr">1995</span><span class="tg">Tarragona</span></span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1100&q=80"
+               alt="Edifici residencial modern administrat per Finques Cèsar a Tarragona" loading="eager" />
+          <div class="hero-badge">
+            <span class="big">+30</span>
+            <span class="txt">anys cuidant comunitats a Tarragona</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST STRIP (credencials) ===== -->
+    <div class="trust-strip">
+      <div class="wrap">
+        <div class="row">
+          <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg> <b>API</b> col·legiats</span>
+          <span class="sep" aria-hidden="true">·</span>
+          <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l8-4 8 4v14"/><path d="M9 9h.01M9 13h.01M15 9h.01M15 13h.01"/></svg> Administradors de Finques <b>col·legiats</b></span>
+          <span class="sep" aria-hidden="true">·</span>
+          <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> <b>30 anys</b> a Tarragona</span>
+          <span class="sep" aria-hidden="true">·</span>
+          <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 11a4 4 0 1 0-8 0M3 21v-1a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v1"/></svg> Empresa <b>familiar</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== STATS (xifres concretes — il·lustratives a la demo) ===== -->
+    <div class="stats reveal">
+      <div class="wrap" style="display:contents">
+        <div class="stat"><div class="n">+<em>250</em></div><div class="l">Comunitats administrades</div></div>
+        <div class="stat"><div class="n">+<em>900</em></div><div class="l">Immobles gestionats</div></div>
+        <div class="stat"><div class="n">30</div><div class="l">Anys d'experiència (des de 1995)</div></div>
+        <div class="stat"><div class="n">2a</div><div class="l">Generació familiar</div></div>
+      </div>
+    </div>
+    <div class="wrap"><p class="demo-note-inline">Xifres il·lustratives per a la demo — a la versió final s'hi posaran les dades reals de Finques Cèsar.</p></div>
+
+    <!-- ===== SERVEIS DESTACATS ===== -->
+    <section>
+      <div class="wrap">
+        <div style="max-width:60ch;margin-bottom:48px" class="reveal">
+          <span class="eyebrow">Què fem</span>
+          <h2>Tot el que la teva finca necessita, sota un mateix sostre.</h2>
+          <p class="lead" style="margin-top:16px">Una gestió multidisciplinària que combina administració, dret i mercat immobiliari. Menys intermediaris, més tranquil·litat.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="service-card reveal">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg>
+            </div>
+            <h3>Gestió de comunitats</h3>
+            <p>Administració de comunitats de propietaris d'un o diversos immobles, amb comptes clares, mediació i presència real a la finca.</p>
+            <a href="serveis.html#comunitats" class="more">Saber-ne més <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+            </div>
+            <h3>Gestió de lloguers</h3>
+            <p>Habitatges, oficines, places d'aparcament, locals comercials i naus industrials. Ens ocupem de tot el cicle del lloguer.</p>
+            <a href="serveis.html#lloguers" class="more">Saber-ne més <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 7h14M7 7l-3 7a4 4 0 0 0 6 0zM17 7l-3 7a4 4 0 0 0 6 0z"/></svg>
+            </div>
+            <h3>Assessoria jurídica</h3>
+            <p>Consultoria jurídica i tècnica especialitzada en l'àmbit immobiliari, per resoldre dubtes i conflictes amb garanties.</p>
+            <a href="serveis.html#juridica" class="more">Saber-ne més <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPLIT: PER QUÈ NOSALTRES ===== -->
+    <section class="section-alt">
+      <div class="wrap split">
+        <div class="split-media reveal">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=850&q=80"
+               alt="Reunió de l'equip de Finques Cèsar atenent un client" loading="lazy" />
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Qüestió de confiança</span>
+          <h2>El que diferencia un bon administrador es nota cada dia.</h2>
+          <p class="lead" style="margin-top:16px">Molts propietaris pateixen el de sempre: administradors que no visiten la finca, no contesten o presenten comptes impossibles d'entendre. Nosaltres fem just el contrari.</p>
+          <ul class="feature-list">
+            <li>
+              <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span class="t"><b>Visitem la finca</b>No administrem des d'un despatx llunyà: trepitgem l'edifici i coneixem els veïns.</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span class="t"><b>Comptes clares</b>Informació transparent i comprensible, sense lletra petita.</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span class="t"><b>Resposta propera</b>Una veu coneguda a l'altra banda del telèfon, no un centre de trucades.</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span class="t"><b>Ofici local</b>Coneixem Tarragona, el seu parc d'habitatges i fins i tot les seves restes romanes sota terra.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INMOBLES DESTACATS ===== -->
+    <section>
+      <div class="wrap">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:42px" class="reveal">
+          <div style="max-width:48ch">
+            <span class="eyebrow">Agència immobiliària</span>
+            <h2>Immobles destacats</h2>
+            <p class="lead" style="margin-top:14px">Una selecció del que tenim en venda i lloguer a Tarragona i comarca.</p>
+          </div>
+          <a href="agencia.html" class="btn btn-ghost">Veure tots els immobles <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="prop-grid">
+          <!-- Inmoble exemple 1 -->
+          <article class="prop-card reveal">
+            <div class="prop-media">
+              <span class="prop-tag venda">Venda</span>
+              <span class="energy e-c" title="Certificat energètic (exemple)">C</span>
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=700&q=80" alt="Pis lluminós reformat a la Part Alta de Tarragona" loading="lazy" />
+            </div>
+            <div class="prop-body">
+              <div class="prop-ref">Ref. TGN-0142</div>
+              <div class="prop-price">285.000 € <small>· venda</small></div>
+              <div class="prop-title">Pis reformat amb terrassa</div>
+              <div class="prop-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Part Alta, Tarragona</div>
+              <div class="prop-foot">
+                <div class="prop-specs in-foot">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7v10M21 7v10M3 11h18M7 11V8a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/></svg> 3</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M6 12V6a2 2 0 0 1 2-2h1M4 12v4a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-4"/></svg> 2</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h18v18H3zM3 9h18M9 3v18"/></svg> 92 m²</span>
+                </div>
+                <a href="contacte.html" class="btn-consulta">Consultar <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Inmoble exemple 2 -->
+          <article class="prop-card reveal">
+            <div class="prop-media">
+              <span class="prop-tag lloguer">Lloguer</span>
+              <span class="energy e-d" title="Certificat energètic (exemple)">D</span>
+              <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=700&q=80" alt="Saló d'un àtic en lloguer al centre de Tarragona" loading="lazy" />
+            </div>
+            <div class="prop-body">
+              <div class="prop-ref">Ref. TGN-0207</div>
+              <div class="prop-price">950 €<small>/mes · lloguer</small></div>
+              <div class="prop-title">Àtic cèntric amb vistes</div>
+              <div class="prop-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Nou Eixample, Tarragona</div>
+              <div class="prop-foot">
+                <div class="prop-specs in-foot">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7v10M21 7v10M3 11h18M7 11V8a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/></svg> 2</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M6 12V6a2 2 0 0 1 2-2h1M4 12v4a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-4"/></svg> 1</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h18v18H3zM3 9h18M9 3v18"/></svg> 68 m²</span>
+                </div>
+                <a href="contacte.html" class="btn-consulta">Consultar <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Inmoble exemple 3 -->
+          <article class="prop-card reveal">
+            <div class="prop-media">
+              <span class="prop-tag venda">Venda</span>
+              <span class="energy e-b" title="Certificat energètic (exemple)">B</span>
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" alt="Casa unifamiliar amb jardí als afores de Tarragona" loading="lazy" />
+            </div>
+            <div class="prop-body">
+              <div class="prop-ref">Ref. TGN-0188</div>
+              <div class="prop-price">420.000 € <small>· venda</small></div>
+              <div class="prop-title">Casa amb jardí i garatge</div>
+              <div class="prop-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Sant Pere i Sant Pau</div>
+              <div class="prop-foot">
+                <div class="prop-specs in-foot">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7v10M21 7v10M3 11h18M7 11V8a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/></svg> 4</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M6 12V6a2 2 0 0 1 2-2h1M4 12v4a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-4"/></svg> 3</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h18v18H3zM3 9h18M9 3v18"/></svg> 165 m²</span>
+                </div>
+                <a href="contacte.html" class="btn-consulta">Consultar <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIS (prova social) ===== -->
+    <section class="section-alt">
+      <div class="wrap">
+        <div style="max-width:56ch;margin-bottom:44px" class="reveal">
+          <span class="eyebrow">Qüestió de confiança</span>
+          <h2>El que diuen els qui ja ens confien la seva finca.</h2>
+          <p class="lead" style="margin-top:14px">Propietaris, presidents de comunitat i inversors de Tarragona que han deixat enrere l'administrador de sempre.</p>
+        </div>
+
+        <div class="tst-grid">
+          <article class="tst-card reveal">
+            <span class="tag">Comunitat</span>
+            <div class="stars" aria-label="5 sobre 5">★★★★★</div>
+            <blockquote>"Per fi un administrador que ve a la finca i contesta el telèfon. En sis mesos van resoldre temes que arrossegàvem feia anys. Les comptes, claríssimes."</blockquote>
+            <div class="who">
+              <span class="av" aria-hidden="true">MR</span>
+              <div><div class="nm">Montse R.</div><div class="ro">Presidenta de comunitat · Part Alta</div></div>
+            </div>
+          </article>
+
+          <article class="tst-card reveal">
+            <span class="tag">Lloguer</span>
+            <div class="stars" aria-label="5 sobre 5">★★★★★</div>
+            <blockquote>"Tinc tres pisos llogats i no m'he de preocupar de res: cobraments puntuals, llogaters ben triats i liquidacions clares cada mes. Tranquil·litat total."</blockquote>
+            <div class="who">
+              <span class="av" aria-hidden="true">JF</span>
+              <div><div class="nm">Jordi F.</div><div class="ro">Propietari · Nou Eixample</div></div>
+            </div>
+          </article>
+
+          <article class="tst-card reveal">
+            <span class="tag">Compravenda</span>
+            <div class="stars" aria-label="5 sobre 5">★★★★★</div>
+            <blockquote>"Em van vendre el pis en menys de dos mesos i a un preu just. Coneixen Tarragona pam a pam i t'ho expliquen tot sense lletra petita."</blockquote>
+            <div class="who">
+              <span class="av" aria-hidden="true">CD</span>
+              <div><div class="nm">Carme D.</div><div class="ro">Venedora · Sant Salvador</div></div>
+            </div>
+          </article>
+        </div>
+        <p class="demo-note-inline">Testimonis d'exemple per a la demo — a la versió final s'hi posaran ressenyes reals de clients (amb permís) i les valoracions de Google.</p>
+      </div>
+    </section>
+
+    <!-- ===== CTA BAND ===== -->
+    <section>
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <span class="eyebrow" style="color:var(--gold-soft)">Parlem-ne</span>
+          <h2>La teva comunitat es mereix un administrador present.</h2>
+          <p>Explica'ns la teva situació sense compromís. T'assessorem sobre comunitats, lloguers o la compravenda del teu immoble a Tarragona.</p>
+          <div class="hero-actions">
+            <a href="contacte.html" class="btn btn-gold">Contacta amb nosaltres <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="tel:+34977237515" class="btn btn-ghost">977 23 75 15</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (component únic) ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-logo" src="assets/img/logo.png" alt="Finques Cèsar" width="300" height="135" />
+          <p class="footer-about">Empresa familiar de segona generació dedicada a l'administració de finques, el lloguer i la intermediació immobiliària a Tarragona. Qüestió de confiança.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="WhatsApp (demo)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.7-3.3-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-1 1-1.3 2.4-.4 4.1 1.3 2.4 3 4.1 5.5 5.2 2.3 1 2.9.8 3.5.8.9-.1 1.7-.7 2-1.4.2-.4.2-.8.1-.9-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2z"/></svg></a>
+            <a href="#" aria-label="Instagram (demo)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="LinkedIn (demo)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.5 8.5h3v12h-3zM9 8.5h2.9v1.6h.04c.4-.76 1.4-1.6 2.9-1.6 3.1 0 3.66 2 3.66 4.7v7.3h-3v-6.5c0-1.5 0-3.5-2.1-3.5s-2.4 1.7-2.4 3.4v6.6H9z"/></svg></a>
+          </div>
+          <div class="footer-reviews"><span class="stars" aria-hidden="true">★★★★★</span> <span><b>4,9</b> · valoracions a Google <em style="opacity:.6">(exemple)</em></span></div>
+        </div>
+        <div>
+          <h4>Navegació</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inici</a></li>
+            <li><a href="serveis.html">Serveis</a></li>
+            <li><a href="agencia.html">Agència immobiliària</a></li>
+            <li><a href="qui-som.html">Qui som</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Serveis</h4>
+          <ul class="footer-links">
+            <li><a href="serveis.html#comunitats">Gestió de comunitats</a></li>
+            <li><a href="serveis.html#lloguers">Gestió de lloguers</a></li>
+            <li><a href="serveis.html#juridica">Assessoria jurídica</a></li>
+            <li><a href="agencia.html">Compravenda</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacte</h4>
+          <address class="footer-contact" style="font-style:normal">
+            Governador Gonzàlez, 35, entl. 1a<br />
+            43001 Tarragona<br />
+            <a href="tel:+34977237515">977 23 75 15</a> · <a href="tel:+34977237466">977 23 74 66</a><br />
+            <a href="mailto:finquescesar@finquescesar.cat">finquescesar@finquescesar.cat</a><br />
+            <span style="color:rgba(251,250,244,.55)">Dl–Dv 9:30–13:30 · Dj tarda 16:00–19:00</span>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Finques Cèsar S.L. — Demo de presentació.</span>
+        <div class="badges">
+          <span>Col·legiats API</span>
+          <span>Administradors de Finques</span>
+          <span>Diplomats en Ciències Empresarials</span>
+          <span>Graduat Social</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

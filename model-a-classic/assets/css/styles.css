@@ -1,0 +1,598 @@
+/* ============================================================
+   FINQUES CÈSAR — Redisseny autèntic
+   Identitat construïda a partir del logotip REAL:
+     · Verd de marca  #008050  (mostrejat del logo)
+     · Groc/or de marca #F0D060 (mostrejat del logo)
+   Estil "local & human": empresa familiar de Tarragona,
+   30 anys d'ofici. Tipografia amb caràcter (Bricolage
+   Grotesque + Public Sans) — fugim de l'aspecte genèric.
+   Full d'estil únic compartit per totes les pàgines.
+   ============================================================ */
+
+/* ---------- TOKENS ---------- */
+:root {
+  /* --- Colors de marca (del logotip) --- */
+  --brand-green: #008050;   /* verd viu del logo */
+  --brand-gold:  #f0d060;   /* groc/or dels blocs */
+
+  /* --- Derivats per a grans superfícies (refinats) --- */
+  --green:       #0a6b46;   /* verd principal, una mica més profund per a UI */
+  --green-deep:  #064b30;   /* seccions fosques */
+  --green-ink:   #042b1d;   /* footer / contrastos forts */
+  --gold:        #e6b73f;   /* or per a accents (text/línies) */
+  --gold-deep:   #c69219;   /* or sobre fons clars */
+
+  /* --- Neutres càlids (paper, no blanc fred) --- */
+  --paper:    #f4f1e8;      /* fons principal, càlid */
+  --paper-2:  #ece7d8;      /* secció alterna */
+  --paper-3:  #fdfbf4;      /* targetes */
+  --ink:      #20271f;      /* text principal, verd-marró fosc */
+  --ink-soft: #4b5347;
+  --muted:    #71776a;
+  --line:     #d7d0bd;
+  --red:      #b8231a;      /* validació / errors */
+
+  /* --- Tipografia (caràcter, no per defecte) --- */
+  --display: 'Bricolage Grotesque', 'Arial Narrow', sans-serif;
+  --body:    'Public Sans', system-ui, -apple-system, sans-serif;
+
+  /* --- Mesures --- */
+  --wrap: 1200px;
+  --radius: 6px;            /* cantonades més rectes = menys "SaaS arrodonit" */
+  --radius-sm: 4px;
+  --shadow: 0 22px 50px -30px rgba(6, 43, 29, .55);
+  --shadow-sm: 0 10px 26px -18px rgba(6, 43, 29, .5);
+  --ease: cubic-bezier(.2,.7,.2,1);
+}
+
+/* ---------- RESET ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background-color: var(--paper);
+  /* textura subtil de paper: dos gradients molt suaus + gra fi */
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(0,128,80,.04), transparent 42%),
+    radial-gradient(circle at 88% 78%, rgba(240,208,96,.06), transparent 45%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+:focus-visible { outline: 3px solid var(--gold-deep); outline-offset: 3px; border-radius: 2px; }
+
+/* ---------- TIPOGRAFIA ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-wrap: balance;   /* reparteix millor les línies dels títols */
+}
+h1 { font-size: clamp(2.6rem, 6.4vw, 5.1rem); font-weight: 800; letter-spacing: -0.035em; }
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; letter-spacing: -0.03em; }
+h3 { font-size: clamp(1.3rem, 2.1vw, 1.7rem); }
+/* inline-block + baseline evita que la paraula "salti" respecte a la resta del títol */
+.display-underline { position: relative; display: inline-block; vertical-align: baseline; white-space: nowrap; }
+.display-underline::after {
+  content: ""; position: absolute; left: -.04em; right: -.04em; bottom: .04em; height: .24em;
+  background: var(--brand-gold); z-index: -1; opacity: .85;
+  transform: skewX(-3deg);
+}
+
+/* ---------- LAYOUT ---------- */
+.wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 30px; }
+section { padding-block: clamp(52px, 6.5vw, 88px); }
+.section-alt { background: var(--paper-2); }
+
+/* Eyebrow amb el "bloc" del logo com a motiu recurrent */
+.eyebrow {
+  font-family: var(--body);
+  font-size: 0.74rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.2em;
+  color: var(--green); margin-bottom: 20px;
+  display: inline-flex; align-items: center; gap: 11px;
+}
+.eyebrow::before {
+  content: ""; width: 13px; height: 13px;
+  background: var(--brand-gold);
+  border: 2.5px solid var(--brand-green);   /* mini bloc F/C */
+  display: inline-block;
+}
+.lead { font-size: clamp(1.08rem, 1.6vw, 1.32rem); color: var(--ink-soft); max-width: 60ch; }
+
+/* ---------- BOTONS (rectes, sòlids, "de despatx seriós") ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 26px; border-radius: var(--radius-sm);
+  font-family: var(--body); font-weight: 700; font-size: 0.95rem; letter-spacing: .01em;
+  transition: transform .22s var(--ease), background .22s var(--ease), box-shadow .22s var(--ease), color .22s;
+}
+.btn-primary { background: var(--green); color: #fff; box-shadow: var(--shadow-sm); }
+.btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--ink); border: 2px solid var(--line); }
+.btn-ghost:hover { border-color: var(--green); color: var(--green); transform: translateY(-2px); }
+.btn-gold { background: var(--brand-gold); color: #3a2c00; }
+.btn-gold:hover { background: var(--gold); transform: translateY(-2px); }
+.btn .arrow { transition: transform .22s var(--ease); }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ============================================================
+   HEADER / NAV  (component únic reutilitzat — corregeix
+   la capçalera triplicada de la web original)
+   ============================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow .3s var(--ease), border-color .3s;
+}
+.site-header.scrolled { box-shadow: var(--shadow-sm); border-bottom-color: transparent; }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 84px; gap: 24px; }
+
+/* Marca amb el LOGO REAL */
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img.logo { height: 50px; width: auto; display: block; }
+/* fallback de marca textual (per si no carrega la imatge) */
+.brand .wordmark { display: none; }
+
+.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-links a {
+  padding: 10px 15px; border-radius: var(--radius-sm);
+  font-size: 0.95rem; font-weight: 600; color: var(--ink-soft);
+  transition: color .2s, background .2s; position: relative;
+}
+.nav-links a:hover { color: var(--green); background: rgba(0,128,80,.08); }
+.nav-links a.active { color: var(--green); }
+.nav-links a.active::after {
+  content: ""; position: absolute; left: 15px; right: 15px; bottom: 3px; height: 2.5px;
+  background: var(--brand-gold);
+}
+.nav-cta { margin-left: 10px; }
+
+.nav-toggle { display: none; width: 46px; height: 46px; border-radius: var(--radius-sm); }
+.nav-toggle span { display: block; width: 23px; height: 2.5px; background: var(--ink); margin: 5px auto; transition: .3s var(--ease); }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* ---------- HERO ---------- */
+.hero { position: relative; padding-block: clamp(48px, 6vw, 80px); }
+.hero-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: clamp(32px, 5vw, 74px); align-items: center; }
+.hero h1 { margin-bottom: 24px; }
+.hero .lead { margin-bottom: 34px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-proof { display: flex; align-items: center; gap: 14px; margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--line); }
+.hero-proof .stars { color: var(--brand-gold); letter-spacing: 2px; font-size: 1.05rem; line-height: 1; }
+.hero-proof .pt { font-size: .9rem; color: var(--ink-soft); }
+.hero-proof .pt b { color: var(--ink); }
+.hero-media { position: relative; }
+.hero-media img {
+  width: 100%; height: clamp(380px, 53vw, 580px); object-fit: cover;
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+/* marc "bloc" daurat darrere la foto — motiu del logo */
+.hero-media::before {
+  content: ""; position: absolute; inset: 22px -20px -22px 22px;
+  border: 3px solid var(--brand-gold); border-radius: var(--radius); z-index: -1;
+}
+/* Segell "Est. 1995" — toc autèntic */
+.seal {
+  position: absolute; top: -26px; right: -22px;
+  width: 112px; height: 112px; border-radius: 50%;
+  background: var(--green); color: var(--paper-3);
+  display: grid; place-items: center; text-align: center;
+  box-shadow: var(--shadow); border: 3px solid var(--brand-gold);
+  transform: rotate(-8deg);
+}
+.seal .in { font-family: var(--display); line-height: 1; }
+.seal .est { font-size: .58rem; letter-spacing: .22em; text-transform: uppercase; opacity: .85; }
+.seal .yr { font-size: 1.7rem; font-weight: 800; margin: 3px 0; }
+.seal .tg { font-size: .5rem; letter-spacing: .18em; text-transform: uppercase; opacity: .85; }
+
+.hero-badge {
+  position: absolute; bottom: 22px; left: -18px;
+  background: var(--paper-3); border: 1px solid var(--line);
+  padding: 16px 20px; border-radius: var(--radius); box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 15px;
+}
+.hero-badge .big { font-family: var(--display); font-size: 2.5rem; font-weight: 800; color: var(--green); line-height: 1; }
+.hero-badge .txt { font-size: 0.84rem; color: var(--muted); max-width: 14ch; line-height: 1.3; }
+
+/* ---------- Page hero ---------- */
+.page-hero { padding-block: clamp(56px, 7vw, 96px) clamp(34px, 5vw, 54px); }
+.page-hero .lead { margin-top: 20px; }
+.breadcrumb { font-size: 0.82rem; color: var(--muted); margin-bottom: 22px; display: flex; gap: 8px; align-items: center; font-weight: 600; }
+.breadcrumb a:hover { color: var(--green); }
+
+/* ---------- STAT STRIP ---------- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-block: 2px solid var(--green); background: var(--paper-3); }
+.stats .stat { padding: 34px 28px; border-right: 1px solid var(--line); }
+.stats .stat:last-child { border-right: none; }
+.stats .stat .n { font-family: var(--display); font-size: clamp(2.1rem, 3.6vw, 3rem); font-weight: 800; color: var(--green); line-height: 1; }
+.stats .stat .n em { font-style: normal; color: var(--gold-deep); display: inline-block; vertical-align: baseline; }
+.stats .stat .l { margin-top: 11px; font-size: 0.9rem; color: var(--muted); font-weight: 500; }
+
+/* ---------- GRIDS ---------- */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+/* ---------- SERVICE CARDS ---------- */
+.service-card {
+  background: var(--paper-3); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 36px 32px;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
+  position: relative; overflow: hidden;
+}
+/* bloc de cantonada (motiu F/C) */
+.service-card::before {
+  content: ""; position: absolute; top: 0; left: 0; width: 0; height: 4px;
+  background: var(--brand-gold); transition: width .35s var(--ease);
+}
+.service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: color-mix(in srgb, var(--green) 35%, var(--line)); }
+.service-card:hover::before { width: 100%; }
+.service-card .ic {
+  width: 56px; height: 56px; border-radius: var(--radius-sm);
+  background: var(--brand-green); color: var(--brand-gold);
+  display: grid; place-items: center; margin-bottom: 24px;
+}
+.service-card .ic svg { width: 27px; height: 27px; }
+.service-card h3 { margin-bottom: 12px; }
+.service-card p { color: var(--ink-soft); font-size: 0.99rem; }
+.service-card .more { margin-top: 22px; display: inline-flex; gap: 8px; font-weight: 700; font-size: 0.92rem; color: var(--green); }
+.service-card .more .arrow { transition: transform .22s var(--ease); }
+.service-card:hover .more .arrow { transform: translateX(4px); }
+
+/* ---------- PROPERTY CARDS ---------- */
+.prop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.prop-card {
+  background: var(--paper-3); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.prop-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.prop-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+.prop-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.prop-card:hover .prop-media img { transform: scale(1.06); }
+.prop-tag {
+  position: absolute; top: 13px; left: 13px;
+  font-family: var(--body); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em;
+  padding: 6px 11px; border-radius: var(--radius-sm);
+}
+.prop-tag.venda { background: var(--green); color: #fff; }
+.prop-tag.lloguer { background: var(--brand-gold); color: #3a2c00; }
+.prop-body { padding: 21px 22px 24px; }
+.prop-price { font-family: var(--display); font-size: 1.55rem; font-weight: 800; color: var(--green); }
+.prop-price small { font-family: var(--body); font-size: 0.78rem; font-weight: 600; color: var(--muted); }
+.prop-title { margin-top: 5px; font-size: 1.06rem; font-weight: 700; font-family: var(--display); }
+.prop-loc { color: var(--muted); font-size: 0.9rem; margin-top: 3px; display: flex; align-items: center; gap: 6px; }
+.prop-specs { margin-top: 17px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; gap: 18px; font-size: 0.88rem; color: var(--ink-soft); font-weight: 500; }
+.prop-specs span { display: inline-flex; align-items: center; gap: 6px; }
+.prop-specs svg { width: 17px; height: 17px; color: var(--muted); }
+
+/* ---------- FILTRES ---------- */
+.filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+.filters button {
+  padding: 9px 18px; border-radius: var(--radius-sm); border: 2px solid var(--line);
+  font-size: 0.9rem; font-weight: 600; color: var(--ink-soft);
+  transition: all .2s var(--ease);
+}
+.filters button:hover { border-color: var(--green); color: var(--green); }
+.filters button.active { background: var(--green); color: #fff; border-color: var(--green); }
+
+/* ---------- SPLIT / FEATURE ---------- */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 74px); align-items: center; }
+.split.reverse > :first-child { order: 2; }
+.split-media { position: relative; }
+.split-media img { width: 100%; height: clamp(330px, 42vw, 500px); object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.split-media::after { /* cantonada bloc daurat */
+  content: ""; position: absolute; width: 64px; height: 64px; right: -14px; bottom: -14px;
+  background: var(--brand-gold); border-radius: var(--radius-sm); z-index: -1;
+}
+.feature-list { margin-top: 28px; display: grid; gap: 16px; }
+.feature-list li { display: flex; gap: 14px; align-items: flex-start; }
+.feature-list .check {
+  flex: 0 0 auto; width: 26px; height: 26px; border-radius: var(--radius-sm);
+  background: var(--brand-green); color: var(--brand-gold);
+  display: grid; place-items: center; margin-top: 2px;
+}
+.feature-list .check svg { width: 15px; height: 15px; }
+.feature-list b { display: block; font-family: var(--display); font-size: 1.02rem; }
+.feature-list span.t { color: var(--ink-soft); font-size: 0.96rem; }
+
+/* ---------- TIMELINE / QUI SOM ---------- */
+.timeline { display: grid; gap: 0; margin-top: 22px; }
+.timeline .item { display: grid; grid-template-columns: 130px 1fr; gap: 30px; padding: 28px 0; border-bottom: 1px solid var(--line); position: relative; }
+.timeline .yr { font-family: var(--display); font-size: 1.7rem; font-weight: 800; color: var(--gold-deep); }
+.timeline h3 { margin-bottom: 6px; }
+.timeline p { color: var(--ink-soft); font-size: 0.99rem; }
+
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.team-card .ph { aspect-ratio: 1; border-radius: var(--radius); overflow: hidden; margin-bottom: 16px; box-shadow: var(--shadow-sm); position: relative; }
+.team-card .ph img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.2) contrast(1.03); transition: filter .4s; }
+.team-card:hover .ph img { filter: none; }
+.team-card .role { color: var(--gold-deep); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
+.team-card .nm { font-family: var(--display); font-size: 1.25rem; font-weight: 700; margin-top: 4px; }
+
+/* ---------- CTA BAND ---------- */
+.cta-band {
+  background: var(--green-deep); color: var(--paper-3);
+  border-radius: var(--radius); padding: clamp(42px, 6vw, 76px); position: relative; overflow: hidden;
+}
+.cta-band::before { content: ""; position: absolute; top: -40px; right: -40px; width: 180px; height: 180px; background: var(--brand-gold); opacity: .14; border-radius: var(--radius); transform: rotate(12deg); }
+.cta-band::after { content: ""; position: absolute; bottom: -50px; left: 8%; width: 120px; height: 120px; border: 4px solid var(--brand-gold); opacity: .18; border-radius: var(--radius); transform: rotate(-10deg); }
+.cta-band h2 { color: var(--paper-3); position: relative; }
+.cta-band p { color: rgba(253,251,244,.84); margin-top: 15px; max-width: 52ch; position: relative; }
+.cta-band .hero-actions { margin-top: 32px; position: relative; }
+.cta-band .btn-ghost { color: var(--paper-3); border-color: rgba(253,251,244,.4); }
+.cta-band .btn-ghost:hover { border-color: var(--paper-3); color: var(--paper-3); background: rgba(253,251,244,.08); }
+
+/* ---------- CONTACT ---------- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(32px, 5vw, 64px); align-items: start; }
+.info-block { display: grid; gap: 22px; }
+.info-item { display: flex; gap: 16px; align-items: flex-start; }
+.info-item .ic { flex: 0 0 auto; width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--brand-green); color: var(--brand-gold); display: grid; place-items: center; }
+.info-item .ic svg { width: 22px; height: 22px; }
+.info-item .k { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.11em; color: var(--muted); margin-bottom: 4px; font-weight: 700; }
+.info-item .v { font-weight: 600; }
+.info-item .v a:hover { color: var(--green); }
+
+.form-card { background: var(--paper-3); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(28px, 4vw, 42px); box-shadow: var(--shadow-sm); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { margin-bottom: 18px; }
+.field label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 7px; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 13px 15px; border: 2px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--paper); font: inherit; font-size: 0.96rem; color: var(--ink);
+  transition: border-color .2s, box-shadow .2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(0,128,80,.14);
+}
+.field textarea { resize: vertical; min-height: 122px; }
+.form-note { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+.demo-pill { display: inline-flex; align-items: center; gap: 7px; font-size: 0.78rem; font-weight: 700; color: var(--gold-deep); background: rgba(240,208,96,.22); padding: 6px 12px; border-radius: var(--radius-sm); margin-bottom: 18px; }
+
+.map-embed { margin-top: 14px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
+.map-embed iframe { width: 100%; height: 320px; border: 0; display: block; filter: grayscale(.12) contrast(1.02); }
+
+/* ---------- FOOTER ---------- */
+.site-footer { background: var(--green-ink); color: rgba(253,251,244,.78); padding-block: 66px 32px; position: relative; }
+.site-footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--brand-green), var(--brand-gold) 60%, var(--brand-green)); }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; }
+.site-footer h4 { color: var(--paper-3); font-family: var(--body); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.13em; font-weight: 800; margin-bottom: 18px; }
+/* El logo real porta fons blanc sòlid: el posem en una "placa" neta
+   perquè es vegi intencionat sobre el verd fosc del footer, no un error. */
+.footer-logo { height: 50px; width: auto; margin-bottom: 18px; background: var(--paper-3); padding: 10px 14px; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
+.footer-about { font-size: 0.93rem; max-width: 32ch; line-height: 1.65; }
+.footer-links li { margin-bottom: 11px; }
+.footer-links a { font-size: 0.93rem; transition: color .2s; }
+.footer-links a:hover { color: var(--brand-gold); }
+.footer-contact { font-size: 0.93rem; line-height: 1.8; }
+.footer-contact a:hover { color: var(--brand-gold); }
+.footer-bottom { margin-top: 50px; padding-top: 24px; border-top: 1px solid rgba(253,251,244,.13); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 0.82rem; color: rgba(253,251,244,.56); }
+.footer-bottom .badges { display: flex; gap: 18px; flex-wrap: wrap; }
+.footer-bottom .badges span { display: inline-flex; align-items: center; gap: 7px; }
+.footer-bottom .badges span::before { content: ""; width: 9px; height: 9px; background: var(--brand-gold); border: 2px solid var(--brand-green); }
+
+/* ---------- FOOTER: XARXES SOCIALS ---------- */
+.footer-social { display: flex; gap: 10px; margin-top: 8px; }
+.footer-social a {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  display: grid; place-items: center;
+  background: rgba(253,251,244,.08); color: var(--paper-3);
+  transition: background .2s, transform .2s, color .2s;
+}
+.footer-social a:hover { background: var(--brand-green); color: #fff; transform: translateY(-2px); }
+.footer-social svg { width: 19px; height: 19px; }
+.footer-reviews { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-size: .9rem; }
+.footer-reviews .stars { color: var(--brand-gold); letter-spacing: 2px; }
+.footer-reviews b { color: var(--paper-3); }
+
+/* ============================================================
+   TRUST STRIP (sota el hero) — barra de credencials
+   ============================================================ */
+.trust-strip { border-block: 1px solid var(--line); background: var(--paper-3); }
+.trust-strip .row { display: flex; align-items: center; justify-content: center; gap: clamp(20px, 4vw, 56px); flex-wrap: wrap; padding-block: 22px; }
+.trust-chip { display: inline-flex; align-items: center; gap: 11px; color: var(--ink-soft); font-weight: 600; font-size: .92rem; }
+.trust-chip svg { width: 22px; height: 22px; color: var(--green); flex: 0 0 auto; }
+.trust-chip b { color: var(--ink); font-family: var(--display); font-weight: 700; }
+.trust-chip .sep { color: var(--line); }
+
+/* ============================================================
+   TESTIMONIS (prova social contextual)
+   ============================================================ */
+.tst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.tst-card {
+  background: var(--paper-3); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 32px 30px; display: flex; flex-direction: column; gap: 18px;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+  position: relative;
+}
+.tst-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.tst-card .tag {
+  align-self: flex-start; font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em;
+  padding: 5px 11px; border-radius: var(--radius-sm); background: rgba(0,128,80,.1); color: var(--green);
+}
+.tst-card .stars { color: var(--brand-gold); letter-spacing: 2px; font-size: 1rem; }
+.tst-card blockquote { font-size: 1.04rem; line-height: 1.55; color: var(--ink); font-family: var(--display); font-weight: 500; }
+.tst-card .who { display: flex; align-items: center; gap: 13px; margin-top: auto; padding-top: 8px; }
+.tst-card .av {
+  width: 46px; height: 46px; border-radius: 50%; flex: 0 0 auto;
+  background: var(--brand-green); color: var(--brand-gold);
+  display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 1.1rem;
+}
+.tst-card .nm { font-weight: 700; font-size: .96rem; }
+.tst-card .ro { color: var(--muted); font-size: .85rem; }
+
+/* nota "dades il·lustratives" */
+.demo-note-inline {
+  display: inline-flex; align-items: center; gap: 7px; margin-top: 26px;
+  font-size: .8rem; color: var(--muted); font-style: italic;
+}
+.demo-note-inline::before { content: ""; width: 8px; height: 8px; background: var(--brand-gold); border: 2px solid var(--brand-green); flex: 0 0 auto; }
+
+/* ============================================================
+   FITXA D'IMMOBLE — enriquiments
+   ============================================================ */
+.prop-media .energy {
+  position: absolute; top: 13px; right: 13px;
+  width: 30px; height: 30px; border-radius: var(--radius-sm);
+  display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: .95rem;
+  color: #fff; box-shadow: var(--shadow-sm);
+}
+.energy.e-a { background: #1f8a3b; } .energy.e-b { background: #4a9e2f; }
+.energy.e-c { background: #8aab20; } .energy.e-d { background: #d9b310; color:#3a2c00; }
+.energy.e-e { background: #e07b18; } .energy.e-f { background: #d6491f; } .energy.e-g { background: #b8231a; }
+.prop-ref { font-size: .72rem; font-weight: 700; letter-spacing: .06em; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+.prop-foot { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.prop-specs.in-foot { margin: 0; padding: 0; border: 0; }
+.btn-consulta {
+  font-size: .82rem; font-weight: 700; color: var(--green);
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  padding: 8px 14px; border: 1.5px solid var(--line); border-radius: var(--radius-sm);
+  transition: all .2s var(--ease);
+}
+.btn-consulta:hover { background: var(--green); color: #fff; border-color: var(--green); }
+.btn-consulta .arrow { transition: transform .2s var(--ease); }
+.btn-consulta:hover .arrow { transform: translateX(3px); }
+
+/* ============================================================
+   FAQ (accordion) — objeccions del propietari
+   ============================================================ */
+.faq { max-width: 800px; margin-inline: auto; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item:first-child { border-top: 1px solid var(--line); }
+.faq-q {
+  width: 100%; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 24px 4px; font-family: var(--display); font-weight: 700; font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--ink);
+}
+.faq-q:hover { color: var(--green); }
+.faq-q .ico { flex: 0 0 auto; width: 28px; height: 28px; border-radius: var(--radius-sm); background: var(--brand-green); color: var(--brand-gold); display: grid; place-items: center; transition: transform .3s var(--ease); position: relative; }
+.faq-q .ico::before, .faq-q .ico::after { content: ""; position: absolute; background: currentColor; border-radius: 2px; }
+.faq-q .ico::before { width: 13px; height: 2.5px; }
+.faq-q .ico::after { width: 2.5px; height: 13px; transition: transform .3s var(--ease); }
+.faq-item[open] .faq-q .ico::after { transform: scaleY(0); }
+.faq-a { padding: 0 4px 26px; color: var(--ink-soft); font-size: 1rem; line-height: 1.65; max-width: 68ch; }
+/* amaga el marcador per defecte de <details> */
+.faq-q::-webkit-details-marker { display: none; }
+details.faq-item > summary { list-style: none; cursor: pointer; }
+details.faq-item > summary::-webkit-details-marker { display: none; }
+
+/* ---------- WHATSAPP ---------- */
+.btn-wa { background: #25923a; color: #fff; }
+.btn-wa:hover { background: #1d7a2f; transform: translateY(-2px); }
+.btn-wa svg { width: 18px; height: 18px; }
+
+/* ============================================================
+   MOVIMENT REFINAT
+   ============================================================ */
+/* Segell del hero: surament lent i suau */
+@keyframes float-seal {
+  0%, 100% { transform: rotate(-8deg) translateY(0); }
+  50%      { transform: rotate(-8deg) translateY(-9px); }
+}
+.seal { animation: float-seal 5.5s ease-in-out infinite; }
+
+/* Banda CTA i footer: lluïssor de gradient molt subtil en moviment */
+@keyframes drift {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.cta-band {
+  background-image: linear-gradient(110deg, var(--green-deep) 0%, var(--green) 45%, var(--green-deep) 90%);
+  background-size: 200% 100%;
+  animation: drift 14s linear infinite alternate;
+}
+
+/* Petita "brillantor" que travessa els botons primaris en passar-hi per sobre */
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after {
+  content: ""; position: absolute; top: 0; left: -120%; width: 60%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent);
+  transform: skewX(-18deg); transition: left .6s var(--ease);
+}
+.btn-primary:hover::after { left: 140%; }
+
+/* Subratllat animat als enllaços del menú en passar-hi per sobre */
+.nav-links a { position: relative; }
+
+/* Comptador d'estadístiques: petit "pop" en aparèixer */
+.stats.in .stat .n { animation: stat-pop .6s var(--ease) both; }
+.stats.in .stat:nth-child(2) .n { animation-delay: .08s; }
+.stats.in .stat:nth-child(3) .n { animation-delay: .16s; }
+.stats.in .stat:nth-child(4) .n { animation-delay: .24s; }
+@keyframes stat-pop {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* Targetes d'immoble i servei: la imatge/realç respon una mica més viu ja existeix;
+   afegim un lleuger realç de l'ombra en tot el grup en passar el cursor */
+.prop-grid:hover .prop-card:not(:hover),
+.tst-grid:hover .tst-card:not(:hover) { opacity: .82; transition: opacity .3s var(--ease); }
+
+/* ---------- REVEAL ---------- */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1000px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-media { order: -1; margin-top: 20px; }
+  .hero-media::before { inset: 16px -12px -16px 16px; }
+  .seal { width: 92px; height: 92px; top: -18px; right: 10px; }
+  .seal .yr { font-size: 1.4rem; }
+  .split, .split.reverse > :first-child, .contact-grid { grid-template-columns: 1fr; }
+  .split.reverse > :first-child { order: 0; }
+  .grid-3, .prop-grid, .team-grid, .tst-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats .stat:nth-child(2) { border-right: none; }
+  .stats .stat:nth-child(1), .stats .stat:nth-child(2) { border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  .nav-links {
+    position: fixed; inset: 84px 0 auto 0; flex-direction: column; align-items: stretch;
+    background: var(--paper); padding: 16px 30px 28px; gap: 4px; border-bottom: 1px solid var(--line);
+    transform: translateY(-130%); transition: transform .35s var(--ease); box-shadow: var(--shadow);
+  }
+  .nav-links.open { transform: translateY(0); }
+  .nav-links a { padding: 14px 16px; }
+  .nav-links a.active::after { left: 16px; right: auto; width: 26px; }
+  .nav-cta { margin: 8px 0 0; }
+  .nav-toggle { display: block; }
+  .grid-3, .prop-grid, .team-grid, .tst-grid, .form-row { grid-template-columns: 1fr; }
+  .timeline .item { grid-template-columns: 1fr; gap: 4px; }
+  .footer-bottom { flex-direction: column; }
+  .hero-badge { left: 10px; }
+  /* segell més petit i ben ancorat perquè no trepitgi la foto */
+  .seal { width: 78px; height: 78px; top: -14px; right: 8px; transform: rotate(-6deg); border-width: 2.5px; animation: none; }
+  .seal .est { font-size: .46rem; }
+  .seal .yr { font-size: 1.2rem; margin: 1px 0; }
+  .seal .tg { font-size: .42rem; }
+  .trust-strip .row { gap: 18px 28px; }
+  .prop-foot { flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .stats .stat { border-right: none; border-bottom: 1px solid var(--line); }
+}
