@@ -3,7 +3,7 @@
 > **Purpose of this file:** a complete briefing so any assistant (Claude Code desktop, a new
 > chat, etc.) — or the user — can pick up this project cold, help prepare the client
 > presentation, and later build out the full website once a model is chosen.
-> Last updated: 2026-06-15.
+> Last updated: 2026-06-23.
 
 ---
 
@@ -30,13 +30,20 @@ plus a "chooser" landing page.
 | Folder | Name | Layout concept | Look | Completeness |
 |--------|------|----------------|------|--------------|
 | `model-a-classic/` | Model A — Clàssic | Horizontal top nav, centered stacked sections | Warm, green/gold, serif-ish (fonts: Bricolage Grotesque + Public Sans) | **Full 5-page site** (Inici, Serveis, Agència, Qui som, Contacte) |
-| `model-b-sidebar/` | Model B — Sidebar | **Fixed vertical left nav rail**, asymmetric magazine layout, services as a numbered list, 1 feature property + mini list | Light, lots of white, elegant serif (Fraunces + Public Sans) | Homepage only |
-| `model-c-panels/` | Model C — Panells | **Full-screen scroll-snap panels** (each section fills the viewport), right-side nav dots | Dark, cinematic, gold accents (Manrope) | Homepage only |
+| `model-b-sidebar/` | Model B — Sidebar | **Fixed vertical left nav rail**, asymmetric magazine layout, services as a numbered list, 1 feature property + mini list | Light, lots of white, elegant serif (Fraunces + Public Sans) | **Full 5-page site** |
+| `model-c-panels/` | Model C — Panells | **Full-screen scroll-snap panels** (each section fills the viewport), right-side nav dots | Dark, cinematic, gold accents (Manrope) | **Full 5-page site** |
 
 `index.html` at the repo root = the **chooser page** (wireframe previews of each model).
 
-> Only Model A is built out to 5 pages. Models B & C are single homepages by design — the
-> winner gets fully built later.
+> **Update 2026-06-23:** all three models are now built out to the same **5 pages** (Inici,
+> Serveis, Agència immobiliària, Qui som, Contacte) and each has a **floating colour-palette
+> switcher** (`assets/js/theme-switcher.js`). Earlier this doc said B & C were homepage-only —
+> that is no longer true; the three are at parity for the pitch.
+>
+> **Polish pass 2026-06-23:** unified the nav label to "Agència immobiliària" across all models
+> (B & C previously said "Immobles"); replaced "Nom Cognom" team placeholders with "(nom
+> d'exemple)"; made the "(exemple)" markers more visible (bordered pill). A presentation script
+> lives in `GUION-PRESENTACION.md`.
 
 ## 3. Real, verified company data (USE EXACTLY — do not invent)
 
