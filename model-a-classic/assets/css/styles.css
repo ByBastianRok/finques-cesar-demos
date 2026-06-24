@@ -408,6 +408,15 @@ section { padding-block: clamp(52px, 6.5vw, 88px); }
 .trust-chip svg { width: 22px; height: 22px; color: var(--green); flex: 0 0 auto; }
 .trust-chip b { color: var(--ink); font-family: var(--display); font-weight: 700; }
 .trust-chip .sep { color: var(--line); }
+/* Segells de credencials (col·legiats i titulats) */
+.creds-title { text-align: center; font-size: .76rem; text-transform: uppercase; letter-spacing: .18em; color: var(--gold-deep); font-weight: 700; padding-top: 26px; }
+.creds-row { display: flex; justify-content: center; align-items: flex-start; gap: clamp(16px, 4vw, 48px); flex-wrap: wrap; padding-block: 18px 30px; }
+.cred-seal { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; width: 152px; }
+.cred-seal .seal-ring { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; background: var(--brand-green); color: var(--brand-gold); box-shadow: 0 0 0 4px var(--paper-3), 0 0 0 6px color-mix(in srgb, var(--brand-gold) 55%, transparent); }
+.cred-seal .seal-ring svg { width: 35px; height: 35px; }
+.cred-seal .cred-name { display: flex; flex-direction: column; gap: 4px; }
+.cred-seal .cred-name b { font-family: var(--display); font-weight: 700; font-size: .9rem; color: var(--ink); line-height: 1.25; }
+.cred-seal .cred-name i { font-style: normal; font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; color: var(--gold-deep); }
 
 /* ============================================================
    TESTIMONIS (prova social contextual)
