@@ -78,6 +78,16 @@ section{padding-block:clamp(60px,7vw,104px)}
 .hero-figure img{width:100%;height:clamp(340px,44vw,520px);object-fit:cover;border-radius:var(--radius)}
 .hero-figure .cap{position:absolute;left:0;bottom:0;background:var(--card);padding:16px 22px;font-size:.85rem;color:var(--muted);border-top:2px solid var(--accent)}
 .hero-figure .cap b{font-family:var(--serif);font-size:1.7rem;color:var(--accent);display:block;font-weight:400}
+/* Segells de credencials (col·legiats i titulats) */
+.creds-band{padding-block:8px 4px}
+.creds-band .creds-title{text-align:center;font-size:.74rem;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);font-weight:700}
+.creds-row{display:flex;justify-content:center;align-items:flex-start;gap:clamp(16px,4vw,46px);flex-wrap:wrap;padding-top:22px}
+.cred-seal{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;width:152px}
+.cred-seal .seal-ring{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:var(--card);color:var(--accent);border:1.5px solid color-mix(in srgb,var(--gold) 65%,var(--line));box-shadow:0 0 0 5px var(--paper),0 0 0 6px color-mix(in srgb,var(--gold) 30%,transparent)}
+.cred-seal .seal-ring svg{width:34px;height:34px}
+.cred-seal .cred-name{display:flex;flex-direction:column;gap:4px}
+.cred-seal .cred-name b{font-family:var(--serif);font-weight:600;font-size:.92rem;color:var(--ink);line-height:1.25}
+.cred-seal .cred-name i{font-style:normal;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold)}
 
 /* ---------- STATS en fila editorial ---------- */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-block:1px solid var(--ink)}

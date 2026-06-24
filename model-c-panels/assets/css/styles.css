@@ -83,6 +83,14 @@ h3{font-size:clamp(1.2rem,1.9vw,1.5rem);font-weight:700;letter-spacing:-.02em}
 .svc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:46px}
 .svc{border:1px solid var(--line);padding:30px 24px;border-radius:var(--radius);transition:background .3s var(--ease),transform .3s var(--ease);background:rgba(255,255,255,.02)}
 .svc:hover{background:rgba(203,164,90,.08);transform:translateY(-5px)}
+/* Segells de credencials (col·legiats i titulats) */
+.creds-row{display:flex;justify-content:flex-start;align-items:flex-start;gap:clamp(14px,3vw,30px);flex-wrap:wrap;margin-top:28px}
+.cred-seal{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;width:124px}
+.cred-seal .seal-ring{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:var(--panel);color:var(--gold);border:1px solid color-mix(in srgb,var(--gold) 50%,transparent);box-shadow:0 0 18px -6px var(--gold),inset 0 0 0 4px rgba(255,255,255,.03)}
+.cred-seal .seal-ring svg{width:30px;height:30px}
+.cred-seal .cred-name{display:flex;flex-direction:column;gap:3px}
+.cred-seal .cred-name b{font-weight:700;font-size:.8rem;color:var(--ink);line-height:1.25}
+.cred-seal .cred-name i{font-style:normal;font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold)}
 .svc .num{font-size:.8rem;color:var(--gold);font-weight:700;letter-spacing:.1em}
 .svc h3{margin:16px 0 10px}
 .svc p{color:var(--ink-soft);font-size:.93rem}
