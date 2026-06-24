@@ -80,7 +80,7 @@ h3{font-size:clamp(1.2rem,1.9vw,1.5rem);font-weight:700;letter-spacing:-.02em}
 .stat .l{margin-top:12px;font-size:.86rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em}
 
 /* ---------- PANELL SERVEIS ---------- */
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.svc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:46px}
 .svc{border:1px solid var(--line);padding:30px 24px;border-radius:var(--radius);transition:background .3s var(--ease),transform .3s var(--ease);background:rgba(255,255,255,.02)}
 .svc:hover{background:rgba(203,164,90,.08);transform:translateY(-5px)}
 .svc .num{font-size:.8rem;color:var(--gold);font-weight:700;letter-spacing:.1em}
