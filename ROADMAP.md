@@ -28,10 +28,9 @@
 
 > **Resultado:** **0 bugs reales.** Las 3 demos están sólidas en escritorio y móvil. Listas para presentar.
 
-## ⏳ FASE 2 — Pulido final
+## ✅ FASE 2 — Pulido final (HECHA)
 - [x] Arreglar lo que salga de la Fase 1 → **nada que arreglar** (0 bugs). ✅
-- [x] (Fiabilidad) **Auto-alojadas las 6 fotos más usadas** (calle Part Alta · 3 propiedades de portada · catedral héroe B · anfiteatro héroe C). 12 HTML a rutas locales, verificado en vivo. **Nunca fallarán** en la reunión. ✅
-  - Quedan en Unsplash las menos vistas (equipo, extras de agencia, fotos de servicios) — bajo riesgo; auto-alojar también si se quiere 100%.
+- [x] (Fiabilidad) **TODAS las fotos auto-alojadas** — 0 dependencia de Unsplash. 85 referencias locales, 0 faltan, verificado en vivo. **NADA puede quedar en blanco** en la reunión, pase lo que pase con la conexión. ✅
 - [ ] (Opcional) Algún detalle anti-slop extra si procede (skill `anti-slop-audit`).
 
 ## ⏳ FASE 3 — Preparar la presentación
