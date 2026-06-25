@@ -30,7 +30,8 @@
 
 ## ⏳ FASE 2 — Pulido final
 - [x] Arreglar lo que salga de la Fase 1 → **nada que arreglar** (0 bugs). ✅
-- [ ] (Opcional, fiabilidad) Auto-alojar las fotos de Unsplash más usadas (calle Part Alta, interiores) como ya se hizo con el héroe/tejados, para que **nunca fallen** si el WiFi de la reunión va lento o Unsplash limita. No es bug, es seguro extra.
+- [x] (Fiabilidad) **Auto-alojadas las 6 fotos más usadas** (calle Part Alta · 3 propiedades de portada · catedral héroe B · anfiteatro héroe C). 12 HTML a rutas locales, verificado en vivo. **Nunca fallarán** en la reunión. ✅
+  - Quedan en Unsplash las menos vistas (equipo, extras de agencia, fotos de servicios) — bajo riesgo; auto-alojar también si se quiere 100%.
 - [ ] (Opcional) Algún detalle anti-slop extra si procede (skill `anti-slop-audit`).
 
 ## ⏳ FASE 3 — Preparar la presentación
