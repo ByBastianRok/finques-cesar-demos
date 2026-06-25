@@ -55,6 +55,13 @@ h3{font-size:clamp(1.2rem,1.8vw,1.5rem);font-weight:500;font-family:var(--sans)}
 /* contingut desplaçat a la dreta de la barra */
 .main{margin-left:var(--rail)}
 .inner{max-width:1080px;padding-inline:clamp(28px,5vw,72px)}
+/* Pantalles amples: centra TOT el bloc (barra + contingut) com una unitat,
+   en lloc de deixar el contingut enganxat a l'esquerra amb un buit gran a la dreta */
+@media(min-width:861px){
+  .rail{left:max(0px,calc((100vw - 1500px)/2))}
+  .main{margin-left:calc(var(--rail) + max(0px,calc((100vw - 1500px)/2)));max-width:calc(1500px - var(--rail))}
+  .inner{max-width:none}
+}
 section{padding-block:clamp(60px,7vw,104px)}
 .bg-2{background:var(--paper-2)}
 
