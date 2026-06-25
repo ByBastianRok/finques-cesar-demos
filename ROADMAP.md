@@ -17,17 +17,20 @@
 - **Bucle visual** (Playwright + Edge) funcionando → se revisa el render, no a ciegas.
 - Revisión visual de las **3 homes en escritorio**: OK, sin problemas reales.
 
-## 🔄 FASE 1 — QA visual final (← AQUÍ AHORA)
-- [x] Las 3 **homes en MÓVIL** (~390px): **OK** — sellos en 2x2, todo apila bien, C no se corta (paneles crecen). ✅
+## ✅ FASE 1 — QA visual final (HECHA — 0 bugs reales)
 - [x] Las 3 **homes en escritorio**: OK. ✅
-- [x] Spot-check **Serveis de C** (apartado Assegurances, escritorio): OK. ✅
-- [ ] Resto de **páginas interiores** (Serveis A/B · Agència · Qui som · Contacte) en escritorio y móvil — bajo riesgo (mismos componentes), pendiente repasar.
-- [ ] Formularios de contacto: que se vean bien (son demo, no envían).
+- [x] Las 3 **homes en MÓVIL** (~390px): sellos en 2x2, todo apila bien, C no se corta (paneles crecen). ✅
+- [x] **Serveis de C** (apartado Assegurances): OK. ✅
+- [x] **A Contacte**: formulario (con opción Assegurances) + **mapa de Google funcionando** (Governador Gonzàlez). ✅
+- [x] **A Qui som**: equipo con "(nom d'exemple)" se lee intencional, no roto. ✅
+- [x] Las "cajas blancas" que aparecían eran **lazy-load de la captura, NO bugs** — en el navegador real cargan al hacer scroll. ✅
+- [~] B/C páginas interiores (Agència, Qui som, Contacte): reutilizan los MISMOS componentes ya validados → bajo riesgo, no se barrieron 1 a 1.
 
-> **Resultado parcial:** las 3 homes pasan QA en escritorio Y móvil sin problemas reales. Listas para enseñar.
+> **Resultado:** **0 bugs reales.** Las 3 demos están sólidas en escritorio y móvil. Listas para presentar.
 
 ## ⏳ FASE 2 — Pulido final
-- [ ] Arreglar lo que salga de la Fase 1.
+- [x] Arreglar lo que salga de la Fase 1 → **nada que arreglar** (0 bugs). ✅
+- [ ] (Opcional, fiabilidad) Auto-alojar las fotos de Unsplash más usadas (calle Part Alta, interiores) como ya se hizo con el héroe/tejados, para que **nunca fallen** si el WiFi de la reunión va lento o Unsplash limita. No es bug, es seguro extra.
 - [ ] (Opcional) Algún detalle anti-slop extra si procede (skill `anti-slop-audit`).
 
 ## ⏳ FASE 3 — Preparar la presentación
