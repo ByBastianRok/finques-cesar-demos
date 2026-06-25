@@ -17,11 +17,14 @@
 - **Bucle visual** (Playwright + Edge) funcionando → se revisa el render, no a ciegas.
 - Revisión visual de las **3 homes en escritorio**: OK, sin problemas reales.
 
-## ⏳ FASE 1 — QA visual final (← AQUÍ AHORA)
-- [ ] Las 3 demos en **MÓVIL** (~390px). Es móvil-first y el cliente/su madre mirarán en el móvil.
-- [ ] **Páginas interiores** de los 3 (Serveis, Agència, Qui som, Contacte) en escritorio y móvil.
+## 🔄 FASE 1 — QA visual final (← AQUÍ AHORA)
+- [x] Las 3 **homes en MÓVIL** (~390px): **OK** — sellos en 2x2, todo apila bien, C no se corta (paneles crecen). ✅
+- [x] Las 3 **homes en escritorio**: OK. ✅
+- [x] Spot-check **Serveis de C** (apartado Assegurances, escritorio): OK. ✅
+- [ ] Resto de **páginas interiores** (Serveis A/B · Agència · Qui som · Contacte) en escritorio y móvil — bajo riesgo (mismos componentes), pendiente repasar.
 - [ ] Formularios de contacto: que se vean bien (son demo, no envían).
-- [ ] Anotar cualquier detalle (espaciados, textos que desbordan, imágenes lentas).
+
+> **Resultado parcial:** las 3 homes pasan QA en escritorio Y móvil sin problemas reales. Listas para enseñar.
 
 ## ⏳ FASE 2 — Pulido final
 - [ ] Arreglar lo que salga de la Fase 1.
