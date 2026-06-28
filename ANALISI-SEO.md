@@ -1,6 +1,6 @@
 # 🔍 Análisis SEO y técnico — Finques Cèsar (web actual vs rediseño)
 
-> Auditoría detallada de **https://www.finquescesar.cat** y de 4 competidores de Tarragona.
+> Auditoría detallada de **https://www.finquescesar.cat** y de 6 competidores reales de Tarragona y alrededores.
 > Todo **verificado directamente** sobre el código y el comportamiento real de cada web (no estimaciones).
 > Fecha: 2026-06-28. (La puntuación automática de Google PageSpeed no se pudo obtener: cuota diaria
 > de la API gratuita agotada. El resto son hechos comprobados uno a uno.)
@@ -9,13 +9,13 @@
 
 ## 1. Resumen ejecutivo
 La web actual **no está rota y carga en un tiempo aceptable**, pero por debajo **está técnicamente
-obsoleta y es invisible para Google**. Cinco datos que lo resumen:
+obsoleta y le faltan las bases de SEO** (compite peor en las búsquedas genéricas). Cinco datos que lo resumen:
 
 1. 🚨 Corre sobre **PHP 5.4.45**, una versión **sin soporte de seguridad desde 2015** (~11 años).
 2. ❌ **No tiene meta-descripción, ni un solo titular H1, ni datos estructurados** (lo básico de SEO).
 3. ❌ **No fuerza HTTPS** ni tiene cabecera de seguridad (HSTS). Su rival directo **sí**.
 4. ❌ **Sin favicon, sin sitemap.xml, sin robots.txt, sin tarjeta social** (al compartir, enlace soso).
-5. 🎨 **Diseño anticuado** (plantilla de ~hace 10 años, fotos genéricas) y experiencia móvil pobre.
+5. 🎨 **Diseño anticuado** (plantilla antigua, fotos genéricas) y experiencia móvil pobre.
 
 **El rediseño corrige los 5 puntos.**
 
@@ -28,7 +28,7 @@ obsoleta y es invisible para Google**. Cinco datos que lo resumen:
 | Seguridad / stack | 🔴 | PHP **5.4.45** (EOL 2015) · Apache · **sin HTTPS forzado** · **sin HSTS** |
 | Descripción para Google | 🔴 | **No hay meta-description** (Google se inventa el texto del resultado) |
 | Titular H1 | 🔴 | **0 H1** (sí hay 4 H2 y 7 H3, pero falta el titular principal) |
-| Datos estructurados (schema) | 🔴 | **0** (no aparece como negocio local en Google/Maps) |
+| Datos estructurados (schema) en la web | 🟠 | **0** (el resultado de la web sale más pelado; el negocio **sí** tiene ficha propia en Google) |
 | Tarjeta social (Open Graph/Twitter) | 🔴 | **0** (al compartir por WhatsApp: sin foto ni título) |
 | Sitemap / robots.txt | 🔴 | **Ambos 404** (Google rastrea peor) |
 | Idioma / canonical / hreflang | 🔴 | **Ninguno** declarado |
@@ -49,12 +49,12 @@ obsoleta y es invisible para Google**. Cinco datos que lo resumen:
   más datos de los necesarios, sobre todo en móvil con datos.
 - Hecho y alojado por una agencia local (**TecnoBravo**), con una plantilla de su época.
 
-## 4. Problemas de SEO on-page (por qué es invisible para Google)
+## 4. Problemas de SEO on-page (lo que le falta a la web para Google)
 Cada punto es algo que Google usa para entender y mostrar una web, y que **no existe** aquí:
 - **Sin meta-description** → Google improvisa el texto bajo el título en los resultados (peor clic).
 - **Sin H1** → no hay titular que le diga a Google "de qué va esta página".
-- **Sin datos estructurados (schema LocalBusiness)** → no salen la dirección, horario y teléfono como
-  ficha enriquecida en Google ni en Maps.
+- **Sin datos estructurados (schema) en la web** → el resultado propio sale más pelado, sin detalles
+  enriquecidos. (La ficha con dirección/horario en Google/Maps viene del perfil de Google, que **sí** tiene.)
 - **Sin sitemap.xml ni robots.txt** → no hay mapa de la web para el rastreador.
 - **Sin idioma declarado** (`lang`) → Google no sabe que está en catalán.
 - **Título flojo** (sin "Tarragona" ni servicios) → no compite por las búsquedas locales clave.
@@ -70,17 +70,20 @@ Cada punto es algo que Google usa para entender y mostrar una web, y que **no ex
 
 ## 6. Comparativa con la competencia (mismas métricas)
 
-| Web | Stack/seguridad | H1 | Meta-desc | Schema | Open Graph | Responsive |
-|-----|-----------------|:--:|:---------:|:------:|:----------:|:----------:|
+| Web | Stack/seguridad | H1 | Meta-desc | Schema | Open Graph | Móvil |
+|-----|-----------------|:--:|:---------:|:------:|:----------:|:-----:|
 | **Finques Cèsar (actual)** | 🔴 PHP 5.4, sin HTTPS forzado | 0 | NO | NO | NO | sí (anticuado) |
-| **Finques Fernández** (rival) | 🟢 nginx + **HSTS** | 1 | **sí** | **sí** | **sí** | sí |
-| AFT Administración | 🟡 Apache/PHP | 0 | sí | NO | NO | sí |
-| Serveis Actius | 🟡 | 1 | NO | NO | NO | sí |
-| Esteve Martí | 🔴 | 0 | NO | NO | NO | web caída |
+| **Finques Fernández** (Tarragona) | 🟢 nginx + **HSTS** | 1 | **sí** | **sí** | **sí** | sí |
+| Servifinques (Tarragona) | 🟢 PHP 8.2 (moderno) | 0 | sí | **sí** | **sí** | sí |
+| AFT Administración (Tarragona) | 🟡 Apache | 0 | sí | NO | NO | sí |
+| Administracions Savé (Costa Daurada) | 🟡 IIS | 1 | sí | NO | NO | sí |
+| Admin. Mare Nostrum (Salou) | 🟡 Apache 2.4 | 1 | sí | NO | **sí** | sí |
+| Arquifinques (Tarragona) | 🟡 PHP 5.6 | 1 | sí | NO | NO | sí |
 
-**Lectura:** el único competidor que hace el SEO y la seguridad bien es **Fernández**, que es un
-**rival directo** — y va por delante en lo técnico. El resto del sector va flojo, así que **hay hueco
-para adelantarles a todos** con una web moderna.
+**Lectura:** los que mejor lo hacen (**Fernández** y **Servifinques**) ya van por delante en Google.
+E incluso el resto tiene lo básico —descripción y, a menudo, un titular— que a la web actual **le falta**.
+De todos los comparados, **la web actual es la que menos cosas tiene hechas y la tecnología más antigua**.
+Hay hueco real para adelantarles.
 
 ## 7. Impacto de negocio
 - **Menos visibilidad** en "administrador de fincas Tarragona" / "finques Tarragona" → menos clientes
@@ -105,8 +108,8 @@ para adelantarles a todos** con una web moderna.
 
 - La web actual funciona, però **per dins està desactualitzada**: corre sobre tecnologia sense
   manteniment de seguretat des de fa anys.
-- A **Google li falten les bases**: sense descripció, sense titular principal, sense fitxa de negoci
-  local (adreça, horari, telèfon) → costa que us trobin.
+- A la **web li falten les bases** per a Google: sense descripció i sense titular principal → costa que
+  la web competeixi a les cerques genèriques. (La fitxa de negoci a Google ja la teniu; això és del web.)
 - En **compartir l'enllaç** (WhatsApp, xarxes) no apareix ni foto ni títol.
 - Un **competidor directe de Tarragona ja té tot això** ben fet → és el moment de posar-se al davant.
 - El redisseny ho deixa tot **modern, segur, ràpid i pensat per al mòbil**, amb fotos reals de Tarragona.
@@ -116,5 +119,7 @@ les demos en viu. Mateixa empresa, salt evident.*
 
 ---
 *Metodología: auditoría directa del HTML, cabeceras HTTP y render real (Edge) de finquescesar.cat en
-escritorio y móvil, el 2026-06-28. Competidores: Finques Fernández (administradoresdefincastarragona.com),
-AFT (aftarraco.com), Serveis Actius (serveisactius.cat), Esteve Martí (estevemarti.cat).*
+escritorio y móvil, el 2026-06-28. Competidores reales verificados uno a uno: Finques Fernández
+(administradoresdefincastarragona.com), Servifinques (servifinquestarragona.com), AFT (aftarraco.com),
+Administracions Savé (ensalou.com), Admin. Mare Nostrum (administracionsmarenostrum.com), Arquifinques
+(arquifinques.com). Se descartaron webs caídas o fuera del sector. Solo datos comprobados directamente.*
