@@ -145,7 +145,7 @@
         <h2>Per sota del capó</h2>
         <ul class="clean cross">
           <li><strong>PHP 5.4.45</strong>, fi de vida des de 2015: ~11 anys sense pegats de seguretat.</li>
-          <li><strong>No força HTTPS</strong> i no té HSTS (el rival Fernández sí).</li>
+          <li><strong>No força HTTPS</strong> ni té HSTS — el "cadenat" que protegeix la connexió i fa que el navegador i Google la vegin de fiar (Fernández sí que el té).</li>
           <li><strong>2,8 MB</strong> en 53 peticions i <code>no-store</code> (no cau res): més lent del compte.</li>
           <li>Feta amb una plantilla antiga d'una agència local (TecnoBravo).</li>
         </ul>
@@ -154,18 +154,32 @@
 
     <section>
       <h2>Comparativa amb la competència de Tarragona</h2>
+      <p style="margin-bottom:14px">Administradors de finques i immobiliàries <strong>reals i actius</strong> de Tarragona i l'àrea (verificats un a un visitant la web). Les mateixes mètriques per a tots.</p>
       <table>
-        <thead><tr><th>Web</th><th>Tecnologia / seguretat</th><th class="c">H1</th><th class="c">Meta-desc</th><th class="c">Schema</th><th class="c">Open Graph</th></tr></thead>
+        <thead><tr><th>Web</th><th>Tecnologia / seguretat</th><th class="c">H1</th><th class="c">Meta-desc</th><th class="c">Schema</th><th class="c">Open Graph</th><th class="c">Mòbil</th></tr></thead>
         <tbody>
-          <tr class="row-highlight"><td><strong>Finques Cèsar (actual)</strong></td><td>PHP 5.4 · sense HTTPS forçat</td><td class="c">0</td><td class="c">No</td><td class="c">No</td><td class="c">No</td></tr>
-          <tr><td>Finques Fernández <em>(rival)</em></td><td>nginx + HSTS</td><td class="c">1</td><td class="c">Sí</td><td class="c">Sí</td><td class="c">Sí</td></tr>
-          <tr><td>AFT Administració</td><td>Apache / PHP</td><td class="c">0</td><td class="c">Sí</td><td class="c">No</td><td class="c">No</td></tr>
-          <tr><td>Serveis Actius</td><td>—</td><td class="c">1</td><td class="c">No</td><td class="c">No</td><td class="c">No</td></tr>
-          <tr><td>Esteve Martí</td><td>web caiguda</td><td class="c">0</td><td class="c">No</td><td class="c">No</td><td class="c">No</td></tr>
+          <tr class="row-highlight"><td><strong>Finques Cèsar (actual)</strong></td><td>PHP 5.4 · sense HTTPS forçat</td><td class="c">0</td><td class="c">No</td><td class="c">No</td><td class="c">No</td><td class="c">Sí</td></tr>
+          <tr><td>Finques Fernández <em>(Tarragona)</em></td><td>nginx + HSTS</td><td class="c">1</td><td class="c">Sí</td><td class="c">Sí</td><td class="c">Sí</td><td class="c">Sí</td></tr>
+          <tr><td>Servifinques <em>(Tarragona)</em></td><td>PHP 8.2 (modern)</td><td class="c">0</td><td class="c">Sí</td><td class="c">Sí</td><td class="c">Sí</td><td class="c">Sí</td></tr>
+          <tr><td>AFT Administració <em>(Tarragona)</em></td><td>Apache</td><td class="c">0</td><td class="c">Sí</td><td class="c">No</td><td class="c">No</td><td class="c">Sí</td></tr>
+          <tr><td>Administracions Savé <em>(Costa Daurada)</em></td><td>IIS</td><td class="c">1</td><td class="c">Sí</td><td class="c">No</td><td class="c">No</td><td class="c">Sí</td></tr>
+          <tr><td>Admin. Mare Nostrum <em>(Salou)</em></td><td>Apache 2.4</td><td class="c">1</td><td class="c">Sí</td><td class="c">No</td><td class="c">Sí</td><td class="c">Sí</td></tr>
+          <tr><td>Arquifinques <em>(Tarragona)</em></td><td>PHP 5.6</td><td class="c">1</td><td class="c">Sí</td><td class="c">No</td><td class="c">No</td><td class="c">Sí</td></tr>
         </tbody>
       </table>
-      <p style="margin-top:14px">L'únic que fa el SEO i la seguretat bé és <strong>Fernández</strong>, un rival directe que ja va al davant.
-        La resta del sector va just → <strong>hi ha lloc per adelantar-los a tots</strong>.</p>
+
+      <div style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-top:16px;font-size:.92rem">
+        <strong>Què vol dir cada columna (en paraules de tots els dies):</strong>
+        <ul class="clean" style="margin-top:10px">
+          <li><b>H1</b> — el titular que li diu a Google de què va la pàgina.</li>
+          <li><b>Meta-descripció</b> — el text que surt sota el títol als resultats de Google; sense això, Google se l'inventa.</li>
+          <li><b>Schema</b> — fa que Google mostri la teva adreça, horari i telèfon a la fitxa del mapa. Sense això, no hi surts bé.</li>
+          <li><b>Open Graph</b> — quan algú comparteix la teva web per WhatsApp, surt foto i títol en lloc d'un enllaç buit.</li>
+          <li><b>Tecnologia / seguretat</b> — amb quin programari funciona i si força el "cadenat" HTTPS. <i>PHP 5.4</i> vol dir sense manteniment de seguretat des de 2015.</li>
+        </ul>
+      </div>
+
+      <p style="margin-top:16px">Els que ho fan bé (<strong>Fernández</strong> i <strong>Servifinques</strong>) ja van al davant a Google. I fins i tot la resta tenen el bàsic —descripció i, sovint, un titular— que a la web actual de Finques Cèsar <strong>li falta</strong>. De tots els comparats, <strong>la web actual és la que té menys coses fetes i la tecnologia més antiga</strong>. Hi ha marge real per posar-se al davant.</p>
     </section>
 
     <section>
@@ -190,9 +204,10 @@
 
     <footer>
       Auditoria directa del codi, les capçaleres HTTP i el render real (escriptori i mòbil) de finquescesar.cat,
-      el 2026. Competidors comparats: Finques Fernández, AFT, Serveis Actius i Esteve Martí (Tarragona).
-      La puntuació automàtica de Google PageSpeed no es va poder obtenir (quota diària de l'API esgotada);
-      la resta són fets comprovats un a un.
+      el 2026. Competidors reals comparats, verificats un a un visitant cada web: Finques Fernández, Servifinques,
+      AFT Administració, Administracions Savé, Admin. Mare Nostrum i Arquifinques (Tarragona i àrea). Es van
+      descartar webs caigudes o fora del sector. Només dades comprovades directament: cap estimació de volum de
+      cerques, dificultat de paraules clau ni posicions de rànquing (això requereix eines de pagament).
     </footer>
 
   </div>
