@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anàlisi SEO · Finques Cèsar — web actual vs redisseny</title>
+  <meta name="description" content="Auditoria SEO i tècnica de la web actual de Finques Cèsar comparada amb la competència de Tarragona. Per què és el moment de fer el salt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --green:#008050; --green-deep:#06593a; --gold:#f0d060; --gold-deep:#b78e26;
+      --ink:#1b231e; --ink-soft:#586057; --muted:#8a9087; --paper:#faf9f4; --card:#ffffff;
+      --line:#e7e4d9; --red:#c0392b; --amber:#d68910; --ok:#1f8a4c;
+      --serif:'Fraunces',Georgia,serif; --sans:'Public Sans',system-ui,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.62;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:980px;margin:0 auto;padding:clamp(28px,5vw,72px)}
+    h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+    h1{font-size:clamp(2rem,5vw,3.2rem)}
+    h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:18px}
+    h3{font-size:1.12rem;margin-bottom:6px}
+    p{margin-bottom:12px;color:var(--ink-soft)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep)}
+    .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
+    header.hero{border-bottom:1px solid var(--line);padding-bottom:34px;margin-bottom:44px}
+    header.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:62ch;margin-top:16px}
+    section{margin-bottom:52px}
+    .verdict{background:var(--green-deep);color:#fff;border-radius:8px;padding:clamp(24px,4vw,38px);position:relative;overflow:hidden}
+    .verdict::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),transparent)}
+    .verdict h2{color:#fff}
+    .verdict p{color:rgba(255,255,255,.86)}
+    .verdict strong{color:var(--gold)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:8px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px}
+    .card .n{font-family:var(--serif);font-size:1.5rem;color:var(--green);margin-bottom:4px}
+    .card.alarm{border-color:rgba(192,57,43,.4);background:#fdf3f1}
+    .card.alarm .n{color:var(--red)}
+    .badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px}
+    .b-red{background:rgba(192,57,43,.12);color:var(--red)}
+    .b-amber{background:rgba(214,137,16,.14);color:var(--amber)}
+    .b-ok{background:rgba(31,138,76,.13);color:var(--ok)}
+    table{width:100%;border-collapse:collapse;font-size:.93rem;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+    th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}
+    th{background:#f3f1e9;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
+    tr:last-child td{border-bottom:none}
+    td.c,th.c{text-align:center}
+    .row-highlight td{background:#f0f7f2}
+    ul.clean{list-style:none;margin:6px 0 0}
+    ul.clean li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--ink-soft)}
+    ul.clean li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+    ul.cross li::before{background:var(--red)}
+    ul.check li::before{background:var(--ok)}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    @media(max-width:680px){.two{grid-template-columns:1fr}}
+    .note{font-size:.85rem;color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding-top:24px;margin-top:20px;font-size:.84rem;color:var(--muted)}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="hero">
+      <span class="eyebrow">Anàlisi SEO i tècnic · Tarragona</span>
+      <h1>La web actual de Finques Cèsar:<br>per què és el moment del salt.</h1>
+      <p class="lead">Auditoria directa de <strong>finquescesar.cat</strong> i comparativa amb la competència local.
+        Dades comprovades una a una sobre el codi i el comportament real de cada web (2026).</p>
+    </header>
+
+    <section>
+      <div class="verdict">
+        <span class="eyebrow" style="color:var(--gold)">Veredicte</span>
+        <h2 style="margin-top:10px">No està trencada, però et frena.</h2>
+        <p>La web carrega en un temps acceptable, però <strong>per dins està desactualitzada</strong> i és
+          <strong>pràcticament invisible per a Google</strong>. Un competidor directe de Tarragona ja té fetes
+          les bases que aquí falten. El sector va just: hi ha marge real per <strong>posar-se al davant</strong>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>5 dades que ho resumeixen</h2>
+      <div class="cards">
+        <div class="card alarm">
+          <div class="n">PHP 5.4</div>
+          <h3>Tecnologia sense seguretat</h3>
+          <p class="note">Versió <strong>sense suport des de 2015</strong> (~11 anys sense pegats).</p>
+        </div>
+        <div class="card">
+          <div class="n">0</div>
+          <h3>Titulars H1</h3>
+          <p class="note">Google no sap "de què va" la pàgina. Tampoc hi ha meta-descripció.</p>
+        </div>
+        <div class="card">
+          <div class="n">No</div>
+          <h3>Targeta social ni fitxa de negoci</h3>
+          <p class="note">Sense Open Graph ni dades estructurades: en compartir, enllaç buit.</p>
+        </div>
+        <div class="card">
+          <div class="n">2,8 MB</div>
+          <h3>Pes excessiu</h3>
+          <p class="note">53 peticions i sense cau, per a una web senzilla.</p>
+        </div>
+        <div class="card">
+          <div class="n">~2014</div>
+          <h3>Disseny i mòbil antiquats</h3>
+          <p class="note">Plantilla vella, fotos genèriques; al mòbil, atapeït i descuidat.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Diagnòstic de la web actual</h2>
+      <table>
+        <thead><tr><th>Àrea</th><th class="c">Estat</th><th>Què s'ha comprovat</th></tr></thead>
+        <tbody>
+          <tr><td>Seguretat / tecnologia</td><td class="c"><span class="badge b-red">Crític</span></td><td>PHP 5.4.45 (fi de vida 2015) · sense HTTPS forçat · sense HSTS</td></tr>
+          <tr><td>Descripció per a Google</td><td class="c"><span class="badge b-red">Crític</span></td><td>No hi ha meta-description (Google s'inventa el text del resultat)</td></tr>
+          <tr><td>Titular H1</td><td class="c"><span class="badge b-red">Crític</span></td><td>0 H1 (sí 4 H2 i 7 H3, però falta el titular principal)</td></tr>
+          <tr><td>Dades estructurades (schema)</td><td class="c"><span class="badge b-red">Crític</span></td><td>0 — no apareix com a negoci local a Google/Maps</td></tr>
+          <tr><td>Targeta social (Open Graph)</td><td class="c"><span class="badge b-red">Crític</span></td><td>0 — en compartir per WhatsApp, sense foto ni títol</td></tr>
+          <tr><td>Sitemap / robots.txt</td><td class="c"><span class="badge b-red">Crític</span></td><td>Tots dos donen 404</td></tr>
+          <tr><td>Idioma / canonical / favicon</td><td class="c"><span class="badge b-red">Crític</span></td><td>Cap declarat · sense favicon</td></tr>
+          <tr><td>Contingut</td><td class="c"><span class="badge b-amber">Millorable</span></td><td>~487 paraules a tota la portada (escàs per posicionar)</td></tr>
+          <tr><td>Pes / rendiment</td><td class="c"><span class="badge b-amber">Millorable</span></td><td>2,8 MB i 53 peticions · sense cau</td></tr>
+          <tr><td>Responsive mòbil</td><td class="c"><span class="badge b-amber">Just</span></td><td>S'adapta (sense scroll horitzontal), però es veu antiquat i atapeït</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="two">
+      <div>
+        <h2>Per què és invisible per a Google</h2>
+        <ul class="clean cross">
+          <li>Sense <strong>meta-descripció</strong>: el text del resultat surt improvisat.</li>
+          <li>Sense <strong>H1</strong>: no hi ha titular que digui de què va la pàgina.</li>
+          <li>Sense <strong>schema de negoci local</strong>: no surt l'adreça, l'horari ni el telèfon com a fitxa.</li>
+          <li>Sense <strong>sitemap ni robots.txt</strong>: Google la rastreja pitjor.</li>
+          <li>Títol fluix (sense "Tarragona" ni serveis): no competeix per les cerques locals.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Per sota del capó</h2>
+        <ul class="clean cross">
+          <li><strong>PHP 5.4.45</strong>, fi de vida des de 2015: ~11 anys sense pegats de seguretat.</li>
+          <li><strong>No força HTTPS</strong> i no té HSTS (el rival Fernández sí).</li>
+          <li><strong>2,8 MB</strong> en 53 peticions i <code>no-store</code> (no cau res): més lent del compte.</li>
+          <li>Feta amb una plantilla antiga d'una agència local (TecnoBravo).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Comparativa amb la competència de Tarragona</h2>
+      <table>
+        <thead><tr><th>Web</th><th>Tecnologia / seguretat</th><th class="c">H1</th><th class="c">Meta-desc</th><th class="c">Schema</th><th class="c">Open Graph</th></tr></thead>
+        <tbody>
+          <tr class="row-highlight"><td><strong>Finques Cèsar (actual)</strong></td><td>PHP 5.4 · sense HTTPS forçat</td><td class="c">0</td><td class="c">No</td><td class="c">No</td><td class="c">No</td></tr>
+          <tr><td>Finques Fernández <em>(rival)</em></td><td>nginx + HSTS</td><td class="c">1</td><td class="c">Sí</td><td class="c">Sí</td><td class="c">Sí</td></tr>
+          <tr><td>AFT Administració</td><td>Apache / PHP</td><td class="c">0</td><td class="c">Sí</td><td class="c">No</td><td class="c">No</td></tr>
+          <tr><td>Serveis Actius</td><td>—</td><td class="c">1</td><td class="c">No</td><td class="c">No</td><td class="c">No</td></tr>
+          <tr><td>Esteve Martí</td><td>web caiguda</td><td class="c">0</td><td class="c">No</td><td class="c">No</td><td class="c">No</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px">L'únic que fa el SEO i la seguretat bé és <strong>Fernández</strong>, un rival directe que ja va al davant.
+        La resta del sector va just → <strong>hi ha lloc per adelantar-los a tots</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Què soluciona el redisseny</h2>
+      <ul class="clean check">
+        <li><strong>1 titular H1 per pàgina</strong> (comprovat a les 15 pàgines dels 3 models).</li>
+        <li><strong>Meta-descripció, idioma (ca) i etiqueta mòbil</strong> a totes.</li>
+        <li><strong>Dades estructurades + targeta social</strong>: en compartir, surt foto i títol.</li>
+        <li><strong>Fotos reals de Tarragona</strong> (Rambla Nova, catedral, amfiteatre, Part Alta), no stock genèric.</li>
+        <li>Estructura neta de 5 pàgines amb <strong>formulari de contacte</strong> i <strong>mapa</strong> de l'oficina.</li>
+        <li>Hosting modern amb <strong>HTTPS per defecte</strong>, lleuger i ràpid.</li>
+        <li><span class="note">(A la versió final: sitemap.xml, robots.txt, favicon i fitxes d'immoble indexables.)</span></li>
+      </ul>
+      <div class="pill-row">
+        <span class="badge b-ok">Modern</span>
+        <span class="badge b-ok">Segur</span>
+        <span class="badge b-ok">Ràpid</span>
+        <span class="badge b-ok">Pensat per al mòbil</span>
+        <span class="badge b-ok">Fet a mida per a Tarragona</span>
+      </div>
+    </section>
+
+    <footer>
+      Auditoria directa del codi, les capçaleres HTTP i el render real (escriptori i mòbil) de finquescesar.cat,
+      el 2026. Competidors comparats: Finques Fernández, AFT, Serveis Actius i Esteve Martí (Tarragona).
+      La puntuació automàtica de Google PageSpeed no es va poder obtenir (quota diària de l'API esgotada);
+      la resta són fets comprovats un a un.
+    </footer>
+
+  </div>
+</body>
+</html>
