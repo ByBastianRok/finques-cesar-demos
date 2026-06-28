@@ -58,6 +58,17 @@
     .note{font-size:.85rem;color:var(--muted)}
     footer{border-top:1px solid var(--line);padding-top:24px;margin-top:20px;font-size:.84rem;color:var(--muted)}
     .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    /* Impressió en paper / PDF: colors fidels i sense talls lletjos */
+    @media print{
+      body{background:#fff;font-size:10.5pt}
+      .wrap{max-width:100%;padding:12px 16px}
+      *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      section{break-inside:avoid;margin-bottom:20px}
+      table,.card,.cards>div{break-inside:avoid}
+      h1,h2,h3{break-after:avoid}
+      a{text-decoration:none;color:inherit}
+      header.hero{padding-bottom:16px;margin-bottom:22px}
+    }
   </style>
 </head>
 <body>
@@ -69,16 +80,6 @@
       <p class="lead">Auditoria directa de <strong>finquescesar.cat</strong> i comparativa amb la competència local.
         Dades comprovades una a una sobre el codi i el comportament real de cada web (2026).</p>
     </header>
-
-    <section>
-      <div class="verdict">
-        <span class="eyebrow" style="color:var(--gold)">Veredicte</span>
-        <h2 style="margin-top:10px">No està trencada, però et frena.</h2>
-        <p>La web carrega en un temps acceptable, però <strong>per dins està desactualitzada</strong> i és
-          <strong>pràcticament invisible per a Google</strong>. Un competidor directe de Tarragona ja té fetes
-          les bases que aquí falten. El sector va just: hi ha marge real per <strong>posar-se al davant</strong>.</p>
-      </div>
-    </section>
 
     <section>
       <h2>5 dades que ho resumeixen</h2>
