@@ -67,10 +67,12 @@
       *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
       section{margin-bottom:16px}
       h1,h2,h3{break-after:avoid}
+      /* títol + intro + taula viatgen JUNTS a la pàgina nova (bloc .keep) */
+      .keep{break-inside:avoid}
       p{orphans:3;widows:3}
       /* cada bloc SENCER: ni taules ni targetes es parteixen per la meitat */
       table{break-inside:avoid;font-size:9.2pt}
-      .cards,.card,.two>div,.callout,.pill-row,ul.clean li{break-inside:avoid}
+      .cards,.card,.two>div,.callout,ul.clean li{break-inside:avoid}
       th,td{padding:7px 9px}
       a{text-decoration:none;color:inherit}
       header.hero{padding-bottom:14px;margin-bottom:18px}
@@ -160,6 +162,7 @@
     </section>
 
     <section>
+      <div class="keep">
       <h2>Comparativa amb la competència de Tarragona</h2>
       <p style="margin-bottom:14px">Administradors de finques i immobiliàries <strong>reals i actius</strong> de Tarragona i l'àrea (verificats un a un visitant la web). Les mateixes mètriques per a tots.</p>
       <table>
@@ -174,6 +177,7 @@
           <tr><td>Arquifinques <em>(Tarragona)</em></td><td>PHP 5.6</td><td class="c">1</td><td class="c">Sí</td><td class="c">No</td><td class="c">No</td><td class="c">Sí</td></tr>
         </tbody>
       </table>
+      </div>
 
       <div class="callout" style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-top:16px;font-size:.92rem">
         <strong>Què vol dir cada columna (en paraules de tots els dies):</strong>
@@ -198,15 +202,7 @@
         <li><strong>Fotos reals de Tarragona</strong> (Rambla Nova, catedral, amfiteatre, Part Alta), no stock genèric.</li>
         <li>Estructura neta de 5 pàgines amb <strong>formulari de contacte</strong> i <strong>mapa</strong> de l'oficina.</li>
         <li>Hosting modern amb <strong>HTTPS per defecte</strong>, lleuger i ràpid.</li>
-        <li><span class="note">(A la versió final: sitemap.xml, robots.txt, favicon i fitxes d'immoble indexables.)</span></li>
       </ul>
-      <div class="pill-row">
-        <span class="badge b-ok">Modern</span>
-        <span class="badge b-ok">Segur</span>
-        <span class="badge b-ok">Ràpid</span>
-        <span class="badge b-ok">Pensat per al mòbil</span>
-        <span class="badge b-ok">Fet a mida per a Tarragona</span>
-      </div>
     </section>
 
   </div>
