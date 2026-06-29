@@ -60,14 +60,22 @@
     .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
     /* Impressió en paper / PDF: colors fidels i sense talls lletjos */
     @media print{
-      body{background:#fff;font-size:10.5pt}
-      .wrap{max-width:100%;padding:12px 16px}
+      @page{ margin:14mm; }
+      html,body{background:#fff}
+      body{font-size:10.4pt;line-height:1.5}
+      .wrap{max-width:100%;padding:0}
       *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-      section{break-inside:avoid;margin-bottom:20px}
-      table,.card,.cards>div{break-inside:avoid}
+      section{margin-bottom:16px}
       h1,h2,h3{break-after:avoid}
+      p{orphans:3;widows:3}
+      /* blocs que NO s'han de partir per la meitat */
+      .card,.two>div,.callout,.pill-row,ul.clean li,tr{break-inside:avoid}
+      /* taules: poden saltar de pàgina entre files, amb la capçalera repetida a dalt */
+      table{break-inside:auto;font-size:9.2pt}
+      thead{display:table-header-group}
+      th,td{padding:7px 9px}
       a{text-decoration:none;color:inherit}
-      header.hero{padding-bottom:16px;margin-bottom:22px}
+      header.hero{padding-bottom:14px;margin-bottom:18px}
     }
   </style>
 </head>
@@ -169,7 +177,7 @@
         </tbody>
       </table>
 
-      <div style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-top:16px;font-size:.92rem">
+      <div class="callout" style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-top:16px;font-size:.92rem">
         <strong>Què vol dir cada columna (en paraules de tots els dies):</strong>
         <ul class="clean" style="margin-top:10px">
           <li><b>H1</b> — el titular que li diu a Google de què va la pàgina.</li>
