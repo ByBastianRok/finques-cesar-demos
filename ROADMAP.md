@@ -4,7 +4,9 @@
 > Cuando elija → **roadmap 2** (construir el modelo elegido completo + subirlo a internet).
 > Relacionados: `CONTEXT-HANDOFF.md` (briefing), `GUION-PRESENTACION.md` (guion de la reunión).
 
-**Estado:** casi listo para presentar. Falta **QA final** (sobre todo móvil) + ensayar.
+**Estado (2026-06-29):** ✅ **Listo para presentar.** Las 3 demos + el **deck de presentación** + el
+**análisis SEO** están terminados y **en vivo** en GitHub Pages. Repo limpio y pusheado. Solo falta
+**ensayar** (Bastian practica mañana).
 
 ---
 
@@ -33,11 +35,23 @@
 - [x] (Fiabilidad) **TODAS las fotos auto-alojadas** — 0 dependencia de Unsplash. 85 referencias locales, 0 faltan, verificado en vivo. **NADA puede quedar en blanco** en la reunión, pase lo que pase con la conexión. ✅
 - [ ] (Opcional) Algún detalle anti-slop extra si procede (skill `anti-slop-audit`).
 
-## ⏳ FASE 3 — Preparar la presentación
-- [ ] Repasar el `GUION-PRESENTACION.md` (qué decir, en qué orden).
-- [ ] Probar el enlace en vivo en **móvil Y portátil**.
-- [ ] Orden recomendado: empujar **Model A** (encaja con el brief "familiar / gente mayor"), enseñar B y C como alternativas más modernas.
-- [ ] Tener claro **precio y plazo** antes de la reunión.
+## ✅ FASE 3 — Materiales de presentación (HECHA)
+- [x] **Deck de presentación** en HTML, autocontenido y con transiciones → `presentacio/` (en vivo). ✅
+- [x] **Guion por diapositiva** (10 slides) → `GUION-PRESENTACION.md`. ✅
+- [x] **Análisis SEO** en HTML (branded, catalán, **6 competidores reales verificados**) → `analisi-seo.html` (en vivo). ✅
+- [x] Enlaces probados en vivo (escritorio): índice + 3 modelos + deck + análisis = todo **HTTP 200**. ✅
+- [x] Trampa resuelta: la copia de **Vercel** estaba caída (404) y confundía → "homepage" del repo reapuntada a GitHub Pages. **Usar solo `bybastianrok.github.io`.** ✅
+- [x] **Precio: decidido NO hablar de dinero** en la reunión (se dice en persona). ✅
+
+### 🔗 Enlaces EN VIVO (GitHub Pages — nada que descargar)
+- **Presentación:** https://bybastianrok.github.io/finques-cesar-demos/presentacio/
+- **Las 3 webs (índice):** https://bybastianrok.github.io/finques-cesar-demos/
+- **Análisis SEO:** https://bybastianrok.github.io/finques-cesar-demos/analisi-seo.html
+
+## ⏳ FASE 3.5 — Ensayar (AHORA, antes de la reunión)
+- [ ] **Practicar** con el `GUION-PRESENTACION.md` (Bastian, mañana).
+- [ ] Probar el flujo en el **portátil** (deck a pantalla completa + abrir demos en otra pestaña) y en el **móvil**.
+- [ ] Orden recomendado: empujar **Model A** (brief "familiar / gente mayor"); B y C como alternativas más modernas.
 
 ## ⏳ FASE 4 — Presentar al cliente
 - [ ] Enseñar las 3 demos (con su madre, que trabaja para el cliente).
