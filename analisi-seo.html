@@ -68,11 +68,9 @@
       section{margin-bottom:16px}
       h1,h2,h3{break-after:avoid}
       p{orphans:3;widows:3}
-      /* blocs que NO s'han de partir per la meitat */
-      .card,.two>div,.callout,.pill-row,ul.clean li,tr{break-inside:avoid}
-      /* taules: poden saltar de pàgina entre files, amb la capçalera repetida a dalt */
-      table{break-inside:auto;font-size:9.2pt}
-      thead{display:table-header-group}
+      /* cada bloc SENCER: ni taules ni targetes es parteixen per la meitat */
+      table{break-inside:avoid;font-size:9.2pt}
+      .cards,.card,.two>div,.callout,.pill-row,ul.clean li{break-inside:avoid}
       th,td{padding:7px 9px}
       a{text-decoration:none;color:inherit}
       header.hero{padding-bottom:14px;margin-bottom:18px}
