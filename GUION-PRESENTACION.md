@@ -1,73 +1,133 @@
-# 🎤 Guion de presentación — Finques Cèsar
+# 🎤 Guion de la presentación — Finques Cèsar
 
-> Para enseñar las 3 propuestas al responsable de Finques Cèsar y que elija una.
-> Idioma de la web: **catalán**. Tú puedes presentar en castellano o catalán (frases clave en catalán abajo).
-> **Enlace en vivo (envíaselo / ábrelo en la reunión):** https://bybastianrok.github.io/finques-cesar-demos/
-
----
-
-## 0. Antes de la reunión (checklist)
-- [ ] Haber hecho `git push` para que el enlace en vivo tenga la versión pulida (ver README §"actualizar").
-- [ ] Abrir el enlace en vivo en el móvil **y** en un portátil (enseñar que se ve bien en los dos).
-- [ ] Tener a mano la lista de "qué es real vs ejemplo" (sección 4 de este guion).
-- [ ] Móvil cargado y con datos/wifi.
-
-## 1. Apertura (30 segundos)
-> "Bona tarda. He preparat **tres propostes de web** per a Finques Cèsar, no per triar colors,
-> sinó **tres maneres diferents d'organitzar la informació**. El contingut, el logotip i les
-> dades de contacte són **els vostres, reals**. El que vull és que em digueu **quina us
-> representa millor**, i a partir d'aquesta la desenvolupo sencera."
-
-Idea clave a transmitir: **no es una sola web con 3 colores, son 3 estructuras distintas.** Eligen dirección, no detalle.
-
-## 2. Demo de los 3 modelos (el corazón)
-Abre el **enlace en vivo** → aparece la página selectora con los 3. Entra uno a uno.
-
-| Modelo | Cómo presentarlo (1 frase) | Para quién encaja |
-|--------|----------------------------|-------------------|
-| **A — Clàssic** | "La más **cercana y de confianza**: cabecera arriba, todo ordenado, cálida. Es la que ya tiene las 5 páginas completas." | Si quieren transmitir **solidez y tradición** (30 años). |
-| **B — Sidebar** | "Más **moderna y de revista**: menú lateral fijo, mucho aire, elegante." | Si quieren verse **actuales sin perder seriedad**. |
-| **C — Panells** | "La más **impactante**: pantallas completas, oscura, cinematográfica." | Si quieren **destacar e impresionar** (más inmobiliaria premium). |
-
-**Truco de demo:** en cada modelo enseña la **misma página** (ej. Inici y Contacte) para que comparen manzanas con manzanas. Y enseña el **selector de color flotante** ("a més, el color es pot ajustar a la vostra marca en un clic").
-
-Frase puente entre modelos:
-> "Fixeu-vos que **el contingut és el mateix**; el que canvia és **com es presenta**."
-
-## 3. Enseñar que está vivo y es real
-- Abre **Contacte**: "els telèfons, l'adreça i l'horari són els vostres, verificats."
-- Enséñalo en **el móvil**: "es veu perfecte al mòbil, que és per on entra la majoria de gent."
-
-## 4. Ser honesto: qué es real y qué es ejemplo (genera confianza)
-> "Per ser transparent: les **dades de contacte, serveis i credencials són reals**. Les
-> **xifres, els testimonis, la valoració de Google i els pisos d'exemple** estan marcats com
-> a **'exemple'** — a la web final es posarien les vostres dades reals."
-
-Esto juega a tu favor: demuestra rigor y que sabes lo que falta para la versión final.
-
-## 5. Cierre y siguiente paso (pedir la decisión)
-> "Així que la pregunta és senzilla: **quin dels tres us agrada més?** Amb el que trieu,
-> el desenvolupo **sencer**: base de dades d'immobles amb cercador, formulari de contacte
-> que funciona, oficina online, i el posem en línia amb el vostre domini."
-
-Si dudan: "Podeu pensar-ho. Us deixo l'enllaç i el mireu amb calma."
-
-## 6. Si preguntan por precio / plazos
-- Ten claro **tu precio** antes de entrar (no improvises cifras en la sala si no lo tienes pensado).
-- Plazo honesto: "un cop trieu, la versió completa són unes setmanes" (ajústalo a tu realidad).
-- Lo pendiente de la versión final está listado en `CONTEXT-HANDOFF.md §5` (base de datos de
-  inmuebles, formulario real, oficina online, fotos reales del equipo, SEO).
-
-## 7. Errores a evitar
-- ❌ No te metas en jerga técnica (HTML, GitHub, hosting). Habla de **"la web"** y **"lo que ven los clientes"**.
-- ❌ No prometas los datos de ejemplo como reales (testimonios, rating Google).
-- ❌ No abras 8 pestañas; usa la **página selectora** y vuelve a ella entre modelos.
-- ✅ Deja que **toquen el móvil** ellos mismos: engancha.
+> Guion **orientativo** para acompañar la presentación (deck con transiciones) delante de César.
+> Es una guía, no un texto a leer palabra por palabra. Habla natural, mira a la cara, no a la pantalla.
+> **La web es en catalán**; las frases clave para decir en voz alta van **en catalán**, las indicaciones para ti en castellano.
 
 ---
 
-### Chuleta rápida (lo mínimo que tienes que decir)
-1. "Són **3 estructures**, no 3 colors."
-2. Enseñar A → B → C (misma página en cada uno) + selector de color.
-3. "Les dades de contacte són **reals**; xifres i testimonis, **d'exemple**."
-4. "**Quin us agrada més?** El desenvolupo sencer."
+## 🔗 Lo que tienes abierto en el portátil (3 pestañas)
+Ábrelas antes de entrar, en este orden de izquierda a derecha:
+
+1. **La presentación** (esto es lo que se ve casi todo el rato):
+   `https://bybastianrok.github.io/finques-cesar-demos/presentacio/`
+2. **Les tres demos en viu** (selector):
+   `https://bybastianrok.github.io/finques-cesar-demos/`
+   · Model A: `…/model-a-classic/` · Model B: `…/model-b-sidebar/` · Model C: `…/model-c-panels/`
+3. **L'anàlisi** (la prueba técnica, por si pide datos):
+   `https://bybastianrok.github.io/finques-cesar-demos/analisi-seo.html`
+
+> La presentación se mueve con las **flechas ← →** del teclado (o haciendo clic). Pruébalo antes.
+
+## ✅ Antes de entrar (30 seg de checklist)
+- [ ] Portátil cargado, wifi/datos OK, las 3 pestañas abiertas y probadas.
+- [ ] El móvil a mano y cargado (para enseñar la web en el móvil al final).
+- [ ] Presentación a pantalla completa (F11 en el navegador).
+- [ ] Respira. No vendes nada: le **enseñas su negocio mejor contado**.
+
+---
+
+## 🎬 La presentación, diapositiva a diapositiva (10)
+
+### 1 · Portada — *"La nova web, en tres direccions"*
+**En pantalla:** la Rambla Nova, el logo FC, tu nombre.
+**Lo que dices (apertura, ~20 s):**
+> «Bona tarda. He preparat una proposta per a la web de Finques Cèsar. No és per triar colors:
+> són **tres maneres diferents d'organitzar la mateixa informació**. Avui les veiem totes tres
+> i em digueu **quina us representa millor**.»
+
+Idea clave: **dirección, no detalle.** Eligen un camino; lo de afinar viene después.
+
+### 2 · On som avui — *"El negoci és sòlid. La web encara no ho diu."*
+**En pantalla:** la web actual + 3 puntos (foto de stock, plantilla genérica, nada personal).
+**Tono: CONSTRUCTIVO, nunca atacar.** Es "es el momento del salto", no "tu web es mala".
+> «El negoci té trenta anys, segona generació, les credencials en regla. Però qui us busca
+> avui a internet troba **una pàgina que no us fa justícia**: una foto que ni és de Tarragona
+> i una plantilla com mil webs més.»
+
+### 3 · El problema, per dins — *"Per fora compleix. Per dins, s'ha quedat enrere."*
+**En pantalla:** 5 datos (PHP de 2015, 0 titulares Google, enlace vacío en WhatsApp, 2,8 MB, estética 2014).
+**No te metas en jerga.** Traduce cada dato a persona normal:
+> «Per dins, la tecnologia és del 2015 i ja no rep millores de seguretat. I a Google li falten
+> les bases: no sap de què va la pàgina. En compartir-la per WhatsApp, surt **un enllaç buit**,
+> sense foto ni títol.»
+
+🔎 **Si quiere pruebas / es de números:** cambia a la pestaña del **anàlisi-seo** y enséñale la tabla. Si no, sigue.
+
+### 4 · La competència — *"A internet, la competència ja us avança."*
+**En pantalla:** tabla comparada (Finques Cèsar vs 6 administradores reales de Tarragona y alrededores).
+> «Aquests són competidors reals d'aquí. **Tots tenen fet allò bàsic que a la web actual li falta.**
+> La fitxa de Google amb l'adreça i l'horari ja la teniu —això està bé—; aquí mirem **el que depèn
+> de la web**. I de tots, la web actual és **la que té menys coses fetes**. Hi ha marge per posar-vos al davant.»
+
+### 5 · La solució — *"És el moment del salt: tres direccions."*
+**En pantalla:** intro a los 3 modelos (A Clàssic · B Sidebar · C Panells).
+> «La bona notícia: **el contingut ja el teniu**. Es tracta de presentar-lo bé. I us proposo
+> tres direccions. Les mateixes dades reals a totes tres; canvia **com es presenten**.»
+
+### 6 · Model A — Clàssic  → 🟢 **ABRE LA DEMO A EN VIU**
+**En pantalla:** Model A (capçalera horizontal, verde y dorado, cálido).
+> «El **Model A, Clàssic**: el llenguatge de tota la vida, ben fet. Capçalera a dalt, càlid,
+> de confiança. **Per a qui vol transmetre solidesa i tradició.**»
+
+**Acción:** ve a la pestaña 2, abre **Model A en viu**. Enseña **Inici** y **Contacte**.
+> «Aquí és de veritat: telèfons, adreça i horari **són els vostres**.»
+Vuelve a la presentación cuando acabes.
+
+### 7 · Model B — Sidebar  → 🟢 **ABRE LA DEMO B EN VIU**
+**En pantalla:** Model B (barra lateral fija, estilo revista, mucho blanco).
+> «El **Model B, Sidebar**: més estil revista, menú fix al costat, molt net. **Modern sense
+> perdre la serietat.**»
+
+**Acción:** abre **Model B en viu**, **la misma página** (Inici) para que compare igual con igual.
+
+### 8 · Model C — Panells  → 🟢 **ABRE LA DEMO C EN VIU**
+**En pantalla:** Model C (pantallas completas, oscuro y dorado, fotos grandes).
+> «I el **Model C, Panells**: el més impactant. Pantalla completa, fosc i daurat, fotografia gran.
+> **Per a qui vol un toc premium**, una web que es recordi.»
+
+**Acción:** abre **Model C en viu**. Aquí entra muy bien **enseñarlo en el móvil** (lo das y que lo toque él).
+> «Proveu-la al mòbil, que és per on entra la majoria de gent.»
+
+### 9 · El salt, d'un cop d'ull — *"El mateix negoci, una altra presència."*
+**En pantalla:** ABANS (web actual) / DESPRÉS (la nueva). El contraste lo dice todo.
+> «El mateix negoci, **una altra presència**: de foto d'estoc i plantilla del 2014, a **Tarragona
+> real, feta a mida, ràpida i segura**.»
+Aquí **cállate un segundo** y deja que el antes/después hable solo.
+
+### 10 · Com seguim — *"Trieu la direcció i la desenvolupo sencera."*
+**En pantalla:** 3 pasos (1 triar · 2 desenvolupar sencera · 3 posada en marxa).
+> «El pas següent és senzill: **trieu la direcció** que més us representi. A partir d'aquí
+> la desenvolupo **sencera** —base de dades d'immobles amb cercador, formulari que funciona,
+> oficina online, fotos reals— i la posem en marxa per a Tarragona.»
+
+---
+
+## 🤝 Cierre — pedir la decisión (no te vayas sin esto)
+> «Així que la pregunta és fàcil: **quina de les tres us agrada més?**»
+
+- Si elige una → 🎉 «Perfecte. Amb aquesta la desenvolupo sencera.»
+- Si duda → «Cap pressa. Us deixo l'enllaç i ho mireu amb calma; ja em dieu.» (le pasas el enlace de la presentación).
+- Si pide cambiar algo → apúntalo, no lo resuelvas en la sala. «Apuntat, això es pot ajustar.»
+
+## 💶 Si saca el tema del dinero
+Tu estrategia (acordada): **no pongas precio ahora.** Es buen tío; si ve el trabajo currado, pagará bien.
+> «De moment no us preocupeu pel preu; primer trieu la que us agrada i **ho fem**. Si el resultat
+> us convenç, ja ho parlem.»
+En el deck **no hay cifras a propósito**: hoy va de enseñar, no de vender.
+
+## 🚫 Errores a evitar
+- ❌ **Jerga técnica** (HTML, GitHub, hosting, PHP). Di «la web», «el que veuen els clients», «la tecnologia de dins».
+- ❌ Atacar la web actual. Siempre **"és el moment del salt"**, en positivo.
+- ❌ Prometer como reales los datos de **ejemplo** (cifras, testimonios, valoración). Si pregunta: «això és d'exemple; a la final hi van les vostres dades».
+- ❌ Abrir 10 pestañas y perderte. Solo las **3** de arriba; vuelve siempre a la presentación.
+- ✅ Que **toque el móvil** él mismo. Engancha más que cualquier frase.
+
+---
+
+### 🃏 Chuleta (lo mínimo, si te pones nervioso)
+1. «Són **3 direccions**, no 3 colors. Les dades són les vostres, reals.»
+2. Problema (en positivo) → competència (tots tenen el bàsic, vosaltres no… encara).
+3. Model A → B → C, **abriendo cada demo en viu** + enseñar en el **móvil**.
+4. Abans / després.
+5. «**Quina us agrada més?** El desenvolupo sencer.»
