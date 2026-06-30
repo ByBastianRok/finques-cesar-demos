@@ -9,7 +9,7 @@
 
 ## 1. The project in one paragraph
 
-The user ("ByBastianRok", email 13genia30@gmail.com) is a **vibecoder who builds and sells
+The user ("ByBastianRok") is a **vibecoder who builds and sells
 websites**. They are pitching a **redesign of the website of Finques Cèsar S.L.** — a 30-year
 family-run property-management + real-estate firm in Tarragona (Catalonia, Spain). The goal was
 to produce **three distinct demo homepages** to show the company's owner/CEO, who will pick one;
@@ -23,7 +23,7 @@ plus a "chooser" landing page.
 
 - **Repo:** https://github.com/ByBastianRok/finques-cesar-demos (public)
 - **Live link (send to CEO):** https://bybastianrok.github.io/finques-cesar-demos/
-- **Local path:** `C:\Users\13gen\finques-cesar-demos`
+- **Local path:** *(local, varies by machine)*
 - **Stack:** plain HTML + CSS + JS, no build step, no dependencies. Each model is self-contained.
 
 ### The three models
