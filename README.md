@@ -1,32 +1,21 @@
-# Finques Cèsar — Propostes de redisseny web
+# Finques Cèsar — propostes web
 
-Tres propostes de redisseny del lloc web de **Finques Cèsar S.L.** (administració de
-finques, lloguers, assessoria jurídica i agència immobiliària a Tarragona, des de 1995).
+Tres propostes de disseny per al nou web de Finques Cèsar S.L. (administració de finques i
+agència immobiliària a Tarragona, des de 1995). Cada model és una direcció visual diferent
+amb el mateix contingut i les dades de contacte reals; la idea és triar-ne una i desenvolupar-la.
 
-Cada model és una **estructura de disseny diferent** (no només un canvi de color), amb el
-mateix contingut, logotip i dades de contacte reals.
+## Els models
 
-## Com es veu
+- **Model A — Clàssic** (`model-a-classic/`) — capçalera horitzontal, to càlid.
+- **Model B — Sidebar** (`model-b-sidebar/`) — menú lateral, estil revista.
+- **Model C — Panells** (`model-c-panels/`) — pantalla completa, fosc.
 
-Obre **`index.html`** (la pàgina de selecció) i tria un model. O entra directament a:
+Obre `index.html` per triar, o entra directament a la carpeta de cada model.
 
-| Model | Concepte | Estat |
-|-------|----------|-------|
-| [Model A — Clàssic](model-a-classic/index.html) | Disposició centrada, capçalera horitzontal | **5 pàgines completes** |
-| [Model B — Sidebar](model-b-sidebar/index.html) | Barra de navegació lateral, estil revista | Pàgina d'inici |
-| [Model C — Panells](model-c-panels/index.html) | Panells a pantalla completa, fosc i immersiu | Pàgina d'inici |
+## Nota
 
-## Important (demo)
+Són demos de presentació. Les dades de contacte (adreça, telèfons, correu, horari), els
+serveis i les credencials són reals. Les xifres de volum, els testimonis i els immobles són
+d'exemple i estan marcats com a tals — a la versió final es posen les dades reals.
 
-Aquestes són **demos de presentació**. Les dades de contacte (adreça, telèfons, correu,
-horari), els serveis i les credencials són **reals i verificats**. En canvi, les xifres
-de volum, els testimonis, la valoració de Google i els immobles d'exemple són
-**il·lustratius** i estan marcats com a tals — caldrà substituir-los per dades reals a la
-versió final.
-
-No hi ha backend: els formularis no envien dades i les "oficines online" són enllaços de
-mostra. La versió definitiva es desenvoluparà a partir del model que esculli el client.
-
----
-
-Tecnologia: HTML + CSS + JavaScript, sense dependències ni pas de compilació.
+Fet amb HTML, CSS i JavaScript, sense dependències.

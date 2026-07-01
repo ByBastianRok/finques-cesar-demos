@@ -4,3 +4,7 @@ Thumbs.db
 desktop.ini
 .vscode/
 *.log
+
+# Tooling local (no publicar)
+.claude/
+.mcp.json
